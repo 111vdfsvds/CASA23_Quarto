@@ -1,23 +1,66 @@
 project:
   type: book
 
+social:
+  github: https://github.com/111vdfsvds/CASA23_Quarto
+
+reader-mode: true
+
 book:
-  title: "the Q book"
-  author: "Jane Doe"
-  date: "2023/3/5"
+  
+  title: "Learning Diary CASA0023"
+  description: "This is my learning diary for the CASA0023 course. I will share my notes, exercises, and reflections on a weekly basis."
+  navbar:
+    logo: logo.jpg
+    background: black
+    search: true
+    right:
+      - icon: github
+  repo-url: https://github.com/111vdfsvds/CASA23_Quarto
+
+# 
+  footer:
+    content: "Copyright © 2023 Zhiwei Huang"
+    links:
+      - title: "GitHub"
+        url: "https://github.com/111vdfsvds/CASA23_Quarto"
+  
+  sidebar:
+    contents: auto
+    style: floating
+    reader-mode: true
+
+  author: "Zhiwei Huang"
+  date: "2023/2/5"
+  
   chapters:
     - index.qmd
-    - intro.qmd
+    - week1.qmd
+    - week2.qmd
+    - week3.qmd
+    - week4.qmd
+    - week5.qmd
+    - week6.qmd
+    - week7.qmd
+    - week8.qmd
     - summary.qmd
     - references.qmd
+  
 
 bibliography: references.bib
 
 format:
   html:
-    theme: cosmo
+    theme: flatly
+    
   pdf:
-    documentclass: scrreprt
+    documentclass: Hugo Book
 
 editor: visual
 
+output:
+  html_document2:
+    toc: true
+    css: styles.css
+
+ 
