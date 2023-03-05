@@ -18,11 +18,11 @@ book:
       - icon: github
   repo-url: https://github.com/111vdfsvds/CASA23_Quarto
 
-  footer:
-    content: "Copyright © 2023 Zhiwei Huang"
-    links:
-      - title: "GitHub"
-        url: "https://github.com/111vdfsvds/CASA23_Quarto"
+  # footer:
+  #   content: "Copyright © 2023 Zhiwei Huang"
+  #   links:
+  #     - title: "GitHub"
+  #       url: "https://github.com/111vdfsvds/CASA23_Quarto"
   
   sidebar:
     contents: auto
