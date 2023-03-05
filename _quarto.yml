@@ -1,23 +1,20 @@
 project:
   type: book
-
-# social:
-#   github: https://github.com/111vdfsvds/CASA23_Quarto
-
-reader-mode: true
+  output-dir: docs
 
 book:
   title: "Learning Diary CASA0023"
   description: "This is my learning diary for the CASA0023 course. I will share my notes, exercises, and reflections on a weekly basis."
   navbar:
     logo: logo.jpg
+    collapse: true
+    collapse-below: lg
     background: black
     search: true
     right:
       - icon: github
-  
-  
   sidebar:
+    title: "CASA0023"
     style: floating
     reader-mode: true
   repo-url: https://github.com/111vdfsvds/CASA23_Quarto
@@ -36,17 +33,26 @@ book:
     - week8.qmd
     - summary.qmd
     - references.qmd
-  
-
+    
+  reader-mode: true
 bibliography: references.bib
+    
+  
+website:
+  google-analytics:
+    tracking-id: "G-5LZK055F2X"
+    anonymize-ip: true
 
 format:
   html:
-    theme: flatly
-  pdf:
-    documentclass: Hugo Book
+    theme:
+        light: [cosmo, flatly]
+        dark: [cosmo, darkly]
+    code-link: true
 
-editor: visual
+
+  pdf:
+    documentclass: scrbook
 
 
  
