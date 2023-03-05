@@ -57,9 +57,5 @@ format:
 
 editor: visual
 
-output:
-  html_document2:
-    toc: true
-    css: styles.css
 
  
