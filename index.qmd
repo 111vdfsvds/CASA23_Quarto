@@ -1,15 +1,18 @@
 # Preface {.unnumbered}
 
-This is a Quarto book.HUANGHUANGHUANG
+## About the book
 
-To learn more about Quarto books visit [https://quarto.org](https://quarto.org/docs/books){.uri}
+This book summarises my thoughts and reflections on the CASA0023 'Remote Sensing Cities and the Environment' course. I took the course as part of my MSc in Urban Spatial Science at University College London. I look forward to receiving your valuable comments on this book.
 
-```{r}
+## About me
 
+Hello, my name is Zhiwei Huang or Morgan, and I am from Inner Mongolia Autonomous Region, a wonderful place in China. I graduated from Zhejiang University with a Bachelor's degree in Urban and Rural Planning, and during my undergraduate studies, my main research area was quantitative research on transport development. My current research interests are focused on two aspects: on the one hand, how to introduce more precise and intelligent research methods in urban research, and on the other hand, focusing on the development differences between cities and urban-rural areas to explore the regional and modal differences in spatial development.
+
+
+```{r echo=FALSE, out.width = "100%", fig.align='center', cache=FALSE}
+knitr::include_graphics('index/me1.jpg')
 ```
 
-[/docs/books](https://quarto.org/docs/books){.uri}.
+## Instruction
 
-```{r}
-1 + 1
-```
+Special thanks to Dr Andy MacLachlan for his help in the preparation of this book.
