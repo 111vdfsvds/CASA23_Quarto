@@ -1,4 +1,97 @@
----
-title: "week1"
-editor: visual
----
+# Introduction to Remote Sensing
+
+In this week's lesson, we first learned what remote sensing is, what it is helpful for, and what classifying features remote sensing data has. Landsat and Sentinel were then studied and analysed, including a tasselled-cap transformation method. Finally, by consulting the references, we consider the fields in which remote sensing data are widely used.
+
+## What Is Remote Sensing
+
+Remote sensing is the observation of the Earth from a distance using remote sensors on satellites or aircraft. Remote sensing provides a wealth of global perspectives and geographic information data[@earthsciencedatasystems2019].
+
+Remote sensing can be categorised according to the following elements.
+
+### Earth Orbits
+
+There are three types of Earth orbits: high Earth orbit, medium Earth orbit, and low Earth orbit. Many weathers and some communication satellites tend to have high Earth orbits farthest from the surface[@catalog2009]. Satellites operating in medium (medium) Earth orbit include navigation satellites and specialised satellites designed to monitor specific areas.
+
+```{r echo=FALSE, out.width = "100%", fig.align='center', cache=TRUE, fig.cap="One way of classifying orbits is by altitude. Source: [earthobservatory.nasa](https://earthobservatory.nasa.gov/features/OrbitsCatalog)"}
+knitr::include_graphics('week1/One way of classifying orbits is by altitude..jpg')
+```
+
+The altitude of the orbit, or the distance between the satellite and the Earth's surface, determines how fast the satellite moves around the Earth. As satellites get closer to Earth, the pull of gravity becomes more muscular, and satellites move faster.
+
+### Electromagnetic Spectrum
+
+The electromagnetic spectrum ranges from shorter wavelengths to longer wavelengths. In most cases, the ultraviolet or ultraviolet portion of the spectrum has the shortest wavelength, which is helpful for remote sensing, and this radiation exceeds the violet part of the visible wavelength. Some earth's surface materials, mainly rocks and minerals, fluoresce or emit visible light when exposed to ultraviolet light.
+
+```{r echo=FALSE, out.width = "100%", fig.align='center', cache=TRUE, fig.cap="Diagram of the Electromagnetic Spectrum. Source: [earthobservatory.nasa](https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing)"}
+knitr::include_graphics('week1/Diagram of the Electromagnetic Spectrum..jpg')
+```
+
+The light that our eyes can detect is part of the visible spectrum. Much radiation around us is "invisible" to our eyes but can be seen by other remote sensing instruments and used in our research.
+
+### Resolution
+
+Resolution plays a vital role in how the data from the sensor is used. Resolution can vary depending on the satellite's orbit and sensor design, and for any dataset, there are four types of resolution to consider: radiation, space, spectrum, and time.
+
+Radiation resolution is the sensitivity of a remote sensing platform to detect subtle differences in energy.
+
+Spatial resolution measures the minimum angular spacing between two objects.
+
+The spectral resolution is the number and size of bands in the electromagnetic spectrum that a remote sensing platform can capture. For example, the first two Landsat satellites used a multispectral scanner (MSS) and captured images using four spectral bands.
+
+Temporal resolution refers to how often imagery is recorded for a particular area.
+
+### Sensors
+
+According to the signal source of the exploration object, sensors can be divided into two types: active and passive. Active remote sensing instruments use their own emission sources, while passive remote sensing instruments operate on reflective or light sources.
+
+Each active sensor in remote sensing directs its signal to an object, then examines the response and accepts the data. Most devices use microwaves because they are relatively unaffected by weather conditions.
+
+```{r echo=FALSE, out.width = "100%", fig.align='center', cache=TRUE, fig.cap="Diagram of a passive sensor versus an active sensor. Source: [earthobservatory.nasa](https://up42.com/blog/a-definitive-guide-to-buying-and-using-satellite-imagery)"}
+knitr::include_graphics('week1/Diagram of a passive sensor versus an active sensor.jpg')
+```
+
+Unlike active sensors, passive sensors do not streamline their energy to the object or surface being studied. Passive remote sensing relies on the natural energy (sunlight) reflected by the target. Therefore, it should only be used in proper sunlight. Otherwise, there will be nothing to remember.
+
+## Remotely Data and Processing Methods
+
+### Landsat Data and Sentinel Data
+
+Landsat and Sentinel sensors provide medium to high spatial resolution multispectral data for various applications. Through the synergistic use of Landsat and Sentinel data, it is expected to improve timely and accurate observations of the Earth's surface and dynamics.
+
+Landsat is a scientific Earth observation mission of NASA and the U.S. Geological Survey (USGS) that regularly captures images of the globe. Since its first launch in 1972, Landsat has collected data on forests, farmland, urban areas and freshwater, producing the longest continuous record of its kind. The Sentinel satellite is a European Space Agency (ESA) satellite designed to provide a large amount of data and images for Europe's Copernicus program. Sentinel-1 has bipolar orbiting satellites to provide spatial data for environmental and security assurances and global economic and commercial growth.
+
+### Processing Methods
+
+Standard processing methods for remote sensing data include the following:
+
+The Tasseled-Cap transformation method converts remote sensing image data into three principal components to better describe the land cover type. The three main components are "brightness", "greenness", and "humidity", which can be used to identify land use types and monitor vegetation growth status.
+
+The Normalized Vegetation Index is a widely used index to measure vegetation cover. NDVI calculations are based on the ratio between infrared and visible bands and can be used to monitor vegetation growth, estimate vegetation productivity, and more.
+
+Principal Component Analysis (PCA): This method converts multiband remote sensing data into several principal components to characterise the land cover type better. This method can classify and monitor land use change, vegetation growth, etc.
+
+### Applications
+
+### Agriculture and Forestry
+
+It can monitor vegetation cover, land-use change, drought and disasters, etc., to help crop production and forest management. Time series from the Landsat and Sentinel-2 satellites have great potential for simulating vegetation seasonality[@jönsson2018].
+
+### Water Management
+
+It can monitor changes in water bodies, including water level, flow rate, water temperature, etc., which helps in water management and protection. Using multi-sensor data such as Landsat 7 ETM+, Landsat 8 OLI and Sentinel-1 SAR images as source data, a regional adaptive random forest algorithm can be constructed to realise automatic surface water mapping[@tang2022].
+
+## Reflaction
+
+Through the above, we can understand the meaning and categories of remote sensing, the processing methods of remote sensing data, and the current related research fields. I believe that remote sensing data has potential development in the following areas.
+
+### Remote Sensing Data Optimisation Based on Machine Learning
+
+Remote sensing data are subject to interference from various factors, such as atmospheric disturbance, cloud cover, etc., which may affect the quality and reliability of the data. In the future, multiple technologies, such as machine learning algorithms, can be employed to improve the quality and reliability of data.
+ 
+### Real-time Information Detection Platform
+
+Based on remote sensing data, current affairs feedback the city. Urban planning is dynamic, and urban surface information needs constantly change. Therefore, it is necessary to establish a complete urban surface information monitoring system and a regular feedback mechanism to meet urban planning needs.
+
+### Multi-source Data Integration
+
+Urban surface information involves multiple aspects, such as terrain, buildings, traffic, vegetation, etc., so multi-source data integration is required. Different data sources have other data formats and resolutions, and effectively integrating this data is challenging. In the future, more data fusion techniques can be adopted.

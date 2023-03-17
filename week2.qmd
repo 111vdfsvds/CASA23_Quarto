@@ -1,4 +1,7 @@
 ---
-title: "week2"
-editor: visual
+title: "Sensors: TerraSAR-X and TanDEM-X"
 ---
+
+## Features, applications and reflections
+
+[A basic introduction on TerraSAR-X and TanDEM-X](https://111vdfsvds.github.io/CASA23_Zhiwei/#1)

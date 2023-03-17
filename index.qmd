@@ -13,6 +13,12 @@ Hello, my name is Zhiwei Huang or Morgan, and I am from Inner Mongolia Autonomou
 knitr::include_graphics('index/me1.jpg')
 ```
 
+Contact details 
+
+Mail: zhiwei.huang.22@ucl.ac.uk / huangzhiwei_hz@163.com
+
+Phone numbers: +86 15004921091
+
 ## Instruction
 
 Special thanks to Dr Andy MacLachlan for his help in the preparation of this book.

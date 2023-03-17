@@ -25,7 +25,7 @@
     "href": "index.html#about-me",
     "title": "Learning Diary CASA0023",
     "section": "About me",
-    "text": "About me\nHello, my name is Zhiwei Huang or Morgan, and I am from Inner Mongolia Autonomous Region, a wonderful place in China. I graduated from Zhejiang University with a Bachelor’s degree in Urban and Rural Planning, and during my undergraduate studies, my main research area was quantitative research on transport development. My current research interests are focused on two aspects: on the one hand, how to introduce more precise and intelligent research methods in urban research, and on the other hand, focusing on the development differences between cities and urban-rural areas to explore the regional and modal differences in spatial development."
+    "text": "About me\nHello, my name is Zhiwei Huang or Morgan, and I am from Inner Mongolia Autonomous Region, a wonderful place in China. I graduated from Zhejiang University with a Bachelor’s degree in Urban and Rural Planning, and during my undergraduate studies, my main research area was quantitative research on transport development. My current research interests are focused on two aspects: on the one hand, how to introduce more precise and intelligent research methods in urban research, and on the other hand, focusing on the development differences between cities and urban-rural areas to explore the regional and modal differences in spatial development.\n\n\n\n\n\n\n\n\n\nContact details\nMail: zhiwei.huang.22@ucl.ac.uk / huangzhiwei_hz@163.com\nPhone numbers: +86 15004921091"
   },
   {
     "objectID": "index.html#instructions",
@@ -40,5 +40,61 @@
     "title": "Learning Diary CASA0023",
     "section": "Instruction",
     "text": "Instruction\nSpecial thanks to Dr Andy MacLachlan for his help in the preparation of this book."
+  },
+  {
+    "objectID": "week2.html",
+    "href": "week2.html",
+    "title": "2  Remotely Sensors: TerraSAR-X and TanDEM-X",
+    "section": "",
+    "text": "3 Features, applications and reflections of the sensors.\nhttps://111vdfsvds.github.io/CASA23_Zhiwei/#1"
+  },
+  {
+    "objectID": "week2.html#features-applications-and-reflections-of-the-sensors.",
+    "href": "week2.html#features-applications-and-reflections-of-the-sensors.",
+    "title": "2  Sensors: TerraSAR-X and TanDEM-X",
+    "section": "2.1 Features, applications and reflections of the sensors.",
+    "text": "2.1 Features, applications and reflections of the sensors.\nA basic introduction on WorldView-3"
+  },
+  {
+    "objectID": "week2.html#features-applications-and-reflections",
+    "href": "week2.html#features-applications-and-reflections",
+    "title": "2  Sensors: TerraSAR-X and TanDEM-X",
+    "section": "2.1 Features, applications and reflections",
+    "text": "2.1 Features, applications and reflections\nA basic introduction on TerraSAR-X and TanDEM-X"
+  },
+  {
+    "objectID": "week1.html",
+    "href": "week1.html",
+    "title": "1  week1:",
+    "section": "",
+    "text": "2 Introduction to Remote Sensing\nIn this week’s lesson, we first learned what remote sensing is, what it is helpful for, and what classifying features remote sensing data has. Landsat and Sentinel were then studied and analysed, including a tasselled-cap transformation method. Finally, by consulting the references, we consider the fields in which remote sensing data are widely used."
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Arapoglou, Vassilis P. 2012. “Diversity, Inequality and Urban\nChange.” European Urban and Regional Studies 19 (3):\n223–37. https://doi.org/10.1177/0969776412451800."
+  },
+  {
+    "objectID": "week1.html#what-is-remote-sensing",
+    "href": "week1.html#what-is-remote-sensing",
+    "title": "1  Introduction to Remote Sensing",
+    "section": "1.1 What Is Remote Sensing",
+    "text": "1.1 What Is Remote Sensing\nRemote sensing is the observation of the Earth from a distance using remote sensors on satellites or aircraft. Remote sensing provides a wealth of global perspectives and geographic information data(Earth Science Data Systems 2019).\nRemote sensing can be categorised according to the following elements.\n\n1.1.1 Earth Orbits\nThere are three types of Earth orbits: high Earth orbit, medium Earth orbit, and low Earth orbit. Many weathers and some communication satellites tend to have high Earth orbits farthest from the surface(“Catalog of Earth Satellite Orbits” 2009). Satellites operating in medium (medium) Earth orbit include navigation satellites and specialised satellites designed to monitor specific areas.\n\n\n\n\n\nOne way of classifying orbits is by altitude. Source: earthobservatory.nasa\n\n\n\n\nThe altitude of the orbit, or the distance between the satellite and the Earth’s surface, determines how fast the satellite moves around the Earth. As satellites get closer to Earth, the pull of gravity becomes more muscular, and satellites move faster.\n\n\n1.1.2 Electromagnetic Spectrum\nThe electromagnetic spectrum ranges from shorter wavelengths to longer wavelengths. In most cases, the ultraviolet or ultraviolet portion of the spectrum has the shortest wavelength, which is helpful for remote sensing, and this radiation exceeds the violet part of the visible wavelength. Some earth’s surface materials, mainly rocks and minerals, fluoresce or emit visible light when exposed to ultraviolet light.\n\n\n\n\n\nDiagram of the Electromagnetic Spectrum. Source: earthobservatory.nasa\n\n\n\n\nThe light that our eyes can detect is part of the visible spectrum. Much radiation around us is “invisible” to our eyes but can be seen by other remote sensing instruments and used in our research.\n\n\n1.1.3 Resolution\nResolution plays a vital role in how the data from the sensor is used. Resolution can vary depending on the satellite’s orbit and sensor design, and for any dataset, there are four types of resolution to consider: radiation, space, spectrum, and time.\nRadiation resolution is the sensitivity of a remote sensing platform to detect subtle differences in energy.\nSpatial resolution measures the minimum angular spacing between two objects.\nThe spectral resolution is the number and size of bands in the electromagnetic spectrum that a remote sensing platform can capture. For example, the first two Landsat satellites used a multispectral scanner (MSS) and captured images using four spectral bands.\nTemporal resolution refers to how often imagery is recorded for a particular area.\n\n\n1.1.4 Sensors\nAccording to the signal source of the exploration object, sensors can be divided into two types: active and passive. Active remote sensing instruments use their own emission sources, while passive remote sensing instruments operate on reflective or light sources.\nEach active sensor in remote sensing directs its signal to an object, then examines the response and accepts the data. Most devices use microwaves because they are relatively unaffected by weather conditions.\n\n\n\n\n\nDiagram of a passive sensor versus an active sensor. Source: earthobservatory.nasa\n\n\n\n\nUnlike active sensors, passive sensors do not streamline their energy to the object or surface being studied. Passive remote sensing relies on the natural energy (sunlight) reflected by the target. Therefore, it should only be used in proper sunlight. Otherwise, there will be nothing to remember."
+  },
+  {
+    "objectID": "week1.html#remotely-data-and-processing-methods",
+    "href": "week1.html#remotely-data-and-processing-methods",
+    "title": "1  Introduction to Remote Sensing",
+    "section": "1.2 Remotely Data and Processing Methods",
+    "text": "1.2 Remotely Data and Processing Methods\n\n1.2.1 Landsat Data and Sentinel Data\nLandsat and Sentinel sensors provide medium to high spatial resolution multispectral data for various applications. Through the synergistic use of Landsat and Sentinel data, it is expected to improve timely and accurate observations of the Earth’s surface and dynamics.\nLandsat is a scientific Earth observation mission of NASA and the U.S. Geological Survey (USGS) that regularly captures images of the globe. Since its first launch in 1972, Landsat has collected data on forests, farmland, urban areas and freshwater, producing the longest continuous record of its kind. The Sentinel satellite is a European Space Agency (ESA) satellite designed to provide a large amount of data and images for Europe’s Copernicus program. Sentinel-1 has bipolar orbiting satellites to provide spatial data for environmental and security assurances and global economic and commercial growth.\n\n\n1.2.2 Processing Methods\nStandard processing methods for remote sensing data include the following:\nThe Tasseled-Cap transformation method converts remote sensing image data into three principal components to better describe the land cover type. The three main components are “brightness”, “greenness”, and “humidity”, which can be used to identify land use types and monitor vegetation growth status.\nThe Normalized Vegetation Index is a widely used index to measure vegetation cover. NDVI calculations are based on the ratio between infrared and visible bands and can be used to monitor vegetation growth, estimate vegetation productivity, and more.\nPrincipal Component Analysis (PCA): This method converts multiband remote sensing data into several principal components to characterise the land cover type better. This method can classify and monitor land use change, vegetation growth, etc.\n\n\n1.2.3 Applications\n\n\n1.2.4 Agriculture and Forestry\nIt can monitor vegetation cover, land-use change, drought and disasters, etc., to help crop production and forest management. Time series from the Landsat and Sentinel-2 satellites have great potential for simulating vegetation seasonality(Jönsson et al. 2018).\n\n\n1.2.5 Water Management\nIt can monitor changes in water bodies, including water level, flow rate, water temperature, etc., which helps in water management and protection. Using multi-sensor data such as Landsat 7 ETM+, Landsat 8 OLI and Sentinel-1 SAR images as source data, a regional adaptive random forest algorithm can be constructed to realise automatic surface water mapping(Tang et al. 2022)."
+  },
+  {
+    "objectID": "week1.html#reflaction",
+    "href": "week1.html#reflaction",
+    "title": "1  Introduction to Remote Sensing",
+    "section": "1.3 Reflaction",
+    "text": "1.3 Reflaction\nThrough the above, we can understand the meaning and categories of remote sensing, the processing methods of remote sensing data, and the current related research fields. I believe that remote sensing data has potential development in the following areas.\n\n1.3.1 Remote Sensing Data Optimisation Based on Machine Learning\nRemote sensing data are subject to interference from various factors, such as atmospheric disturbance, cloud cover, etc., which may affect the quality and reliability of the data. In the future, multiple technologies, such as machine learning algorithms, can be employed to improve the quality and reliability of data.\n\n\n1.3.2 Real-time Information Detection Platform\nBased on remote sensing data, current affairs feedback the city. Urban planning is dynamic, and urban surface information needs constantly change. Therefore, it is necessary to establish a complete urban surface information monitoring system and a regular feedback mechanism to meet urban planning needs.\n\n\n1.3.3 Multi-source Data Integration\nUrban surface information involves multiple aspects, such as terrain, buildings, traffic, vegetation, etc., so multi-source data integration is required. Different data sources have other data formats and resolutions, and effectively integrating this data is challenging. In the future, more data fusion techniques can be adopted.\n\n\n\n\n“Catalog of Earth Satellite Orbits.” 2009. https://earthobservatory.nasa.gov/features/OrbitsCatalog.\n\n\nEarth Science Data Systems, NASA. 2019. “What Is Remote Sensing?” https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing.\n\n\nJönsson, Per, Zhanzhang Cai, Eli Melaas, Mark A. Friedl, and Lars Eklundh. 2018. “A Method for Robust Estimation of Vegetation Seasonality from Landsat and Sentinel-2 Time Series Data.” Remote Sensing 10 (4): 635. https://doi.org/10.3390/rs10040635.\n\n\nTang, Hailong, Shanlong Lu, Muhammad Hasan Ali Baig, Mingyang Li, Chun Fang, and Yong Wang. 2022. “Large-Scale Surface Water Mapping Based on Landsat and Sentinel-1 Images.” Water 14 (9): 1454. https://doi.org/10.3390/w14091454."
   }
 ]

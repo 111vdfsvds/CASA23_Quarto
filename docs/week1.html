@@ -8,7 +8,7 @@
 
 <meta name="description" content="This is my learning diary for the CASA0023 course. I will share my notes, exercises, and reflections on a weekly basis.">
 
-<title>Learning Diary CASA0023 - 1&nbsp; week1</title>
+<title>Learning Diary CASA0023 - 1&nbsp; Introduction to Remote Sensing</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,25 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
 }
 </style>
 
@@ -87,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/111vdfsvds/CASA23_Quarto"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/111vdfsvds/CASA23_Quarto"><i class="bi bi-github" role="img" aria-label="Source Code">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -106,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">week1</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Remote Sensing</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -131,12 +150,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week1.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">week1</span></a>
+  <a href="./week1.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Remote Sensing</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">week2</span></a>
+  <a href="./week2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Sensors: TerraSAR-X and TanDEM-X</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -184,14 +203,40 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#what-is-remote-sensing" id="toc-what-is-remote-sensing" class="nav-link active" data-scroll-target="#what-is-remote-sensing"><span class="toc-section-number">1.1</span>  What Is Remote Sensing</a>
+  <ul class="collapse">
+  <li><a href="#earth-orbits" id="toc-earth-orbits" class="nav-link" data-scroll-target="#earth-orbits"><span class="toc-section-number">1.1.1</span>  Earth Orbits</a></li>
+  <li><a href="#electromagnetic-spectrum" id="toc-electromagnetic-spectrum" class="nav-link" data-scroll-target="#electromagnetic-spectrum"><span class="toc-section-number">1.1.2</span>  Electromagnetic Spectrum</a></li>
+  <li><a href="#resolution" id="toc-resolution" class="nav-link" data-scroll-target="#resolution"><span class="toc-section-number">1.1.3</span>  Resolution</a></li>
+  <li><a href="#sensors" id="toc-sensors" class="nav-link" data-scroll-target="#sensors"><span class="toc-section-number">1.1.4</span>  Sensors</a></li>
+  </ul></li>
+  <li><a href="#remotely-data-and-processing-methods" id="toc-remotely-data-and-processing-methods" class="nav-link" data-scroll-target="#remotely-data-and-processing-methods"><span class="toc-section-number">1.2</span>  Remotely Data and Processing Methods</a>
+  <ul class="collapse">
+  <li><a href="#landsat-data-and-sentinel-data" id="toc-landsat-data-and-sentinel-data" class="nav-link" data-scroll-target="#landsat-data-and-sentinel-data"><span class="toc-section-number">1.2.1</span>  Landsat Data and Sentinel Data</a></li>
+  <li><a href="#processing-methods" id="toc-processing-methods" class="nav-link" data-scroll-target="#processing-methods"><span class="toc-section-number">1.2.2</span>  Processing Methods</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="toc-section-number">1.2.3</span>  Applications</a></li>
+  <li><a href="#agriculture-and-forestry" id="toc-agriculture-and-forestry" class="nav-link" data-scroll-target="#agriculture-and-forestry"><span class="toc-section-number">1.2.4</span>  Agriculture and Forestry</a></li>
+  <li><a href="#water-management" id="toc-water-management" class="nav-link" data-scroll-target="#water-management"><span class="toc-section-number">1.2.5</span>  Water Management</a></li>
+  </ul></li>
+  <li><a href="#reflaction" id="toc-reflaction" class="nav-link" data-scroll-target="#reflaction"><span class="toc-section-number">1.3</span>  Reflaction</a>
+  <ul class="collapse">
+  <li><a href="#remote-sensing-data-optimisation-based-on-machine-learning" id="toc-remote-sensing-data-optimisation-based-on-machine-learning" class="nav-link" data-scroll-target="#remote-sensing-data-optimisation-based-on-machine-learning"><span class="toc-section-number">1.3.1</span>  Remote Sensing Data Optimisation Based on Machine Learning</a></li>
+  <li><a href="#real-time-information-detection-platform" id="toc-real-time-information-detection-platform" class="nav-link" data-scroll-target="#real-time-information-detection-platform"><span class="toc-section-number">1.3.2</span>  Real-time Information Detection Platform</a></li>
+  <li><a href="#multi-source-data-integration" id="toc-multi-source-data-integration" class="nav-link" data-scroll-target="#multi-source-data-integration"><span class="toc-section-number">1.3.3</span>  Multi-source Data Integration</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">week1</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Remote Sensing</span></h1>
 </div>
 
 
@@ -206,8 +251,124 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<p>In this week’s lesson, we first learned what remote sensing is, what it is helpful for, and what classifying features remote sensing data has. Landsat and Sentinel were then studied and analysed, including a tasselled-cap transformation method. Finally, by consulting the references, we consider the fields in which remote sensing data are widely used.</p>
+<section id="what-is-remote-sensing" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="what-is-remote-sensing"><span class="header-section-number">1.1</span> What Is Remote Sensing</h2>
+<p>Remote sensing is the observation of the Earth from a distance using remote sensors on satellites or aircraft. Remote sensing provides a wealth of global perspectives and geographic information data<span class="citation" data-cites="earthsciencedatasystems2019">(<a href="references.html#ref-earthsciencedatasystems2019" role="doc-biblioref">Earth Science Data Systems 2019</a>)</span>.</p>
+<p>Remote sensing can be categorised according to the following elements.</p>
+<section id="earth-orbits" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="earth-orbits"><span class="header-section-number">1.1.1</span> Earth Orbits</h3>
+<p>There are three types of Earth orbits: high Earth orbit, medium Earth orbit, and low Earth orbit. Many weathers and some communication satellites tend to have high Earth orbits farthest from the surface<span class="citation" data-cites="catalog2009">(<a href="references.html#ref-catalog2009" role="doc-biblioref"><span>“Catalog of Earth Satellite Orbits”</span> 2009</a>)</span>. Satellites operating in medium (medium) Earth orbit include navigation satellites and specialised satellites designed to monitor specific areas.</p>
+<div class="cell" data-layout-align="center" data-hash="week1_cache/html/unnamed-chunk-1_7bdcc9696e4e4ab83d93878da08fba6c">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week1/One way of classifying orbits is by altitude..jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">One way of classifying orbits is by altitude. Source: <a href="https://earthobservatory.nasa.gov/features/OrbitsCatalog">earthobservatory.nasa</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The altitude of the orbit, or the distance between the satellite and the Earth’s surface, determines how fast the satellite moves around the Earth. As satellites get closer to Earth, the pull of gravity becomes more muscular, and satellites move faster.</p>
+</section>
+<section id="electromagnetic-spectrum" class="level3" data-number="1.1.2">
+<h3 data-number="1.1.2" class="anchored" data-anchor-id="electromagnetic-spectrum"><span class="header-section-number">1.1.2</span> Electromagnetic Spectrum</h3>
+<p>The electromagnetic spectrum ranges from shorter wavelengths to longer wavelengths. In most cases, the ultraviolet or ultraviolet portion of the spectrum has the shortest wavelength, which is helpful for remote sensing, and this radiation exceeds the violet part of the visible wavelength. Some earth’s surface materials, mainly rocks and minerals, fluoresce or emit visible light when exposed to ultraviolet light.</p>
+<div class="cell" data-layout-align="center" data-hash="week1_cache/html/unnamed-chunk-2_04f1c121cb9c2a2e7ab6c6b765a556a7">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week1/Diagram of the Electromagnetic Spectrum..jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Diagram of the Electromagnetic Spectrum. Source: <a href="https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing">earthobservatory.nasa</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The light that our eyes can detect is part of the visible spectrum. Much radiation around us is “invisible” to our eyes but can be seen by other remote sensing instruments and used in our research.</p>
+</section>
+<section id="resolution" class="level3" data-number="1.1.3">
+<h3 data-number="1.1.3" class="anchored" data-anchor-id="resolution"><span class="header-section-number">1.1.3</span> Resolution</h3>
+<p>Resolution plays a vital role in how the data from the sensor is used. Resolution can vary depending on the satellite’s orbit and sensor design, and for any dataset, there are four types of resolution to consider: radiation, space, spectrum, and time.</p>
+<p>Radiation resolution is the sensitivity of a remote sensing platform to detect subtle differences in energy.</p>
+<p>Spatial resolution measures the minimum angular spacing between two objects.</p>
+<p>The spectral resolution is the number and size of bands in the electromagnetic spectrum that a remote sensing platform can capture. For example, the first two Landsat satellites used a multispectral scanner (MSS) and captured images using four spectral bands.</p>
+<p>Temporal resolution refers to how often imagery is recorded for a particular area.</p>
+</section>
+<section id="sensors" class="level3" data-number="1.1.4">
+<h3 data-number="1.1.4" class="anchored" data-anchor-id="sensors"><span class="header-section-number">1.1.4</span> Sensors</h3>
+<p>According to the signal source of the exploration object, sensors can be divided into two types: active and passive. Active remote sensing instruments use their own emission sources, while passive remote sensing instruments operate on reflective or light sources.</p>
+<p>Each active sensor in remote sensing directs its signal to an object, then examines the response and accepts the data. Most devices use microwaves because they are relatively unaffected by weather conditions.</p>
+<div class="cell" data-layout-align="center" data-hash="week1_cache/html/unnamed-chunk-3_b54d52e2865850887a4f40616d27ed95">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week1/Diagram of a passive sensor versus an active sensor.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Diagram of a passive sensor versus an active sensor. Source: <a href="https://up42.com/blog/a-definitive-guide-to-buying-and-using-satellite-imagery">earthobservatory.nasa</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Unlike active sensors, passive sensors do not streamline their energy to the object or surface being studied. Passive remote sensing relies on the natural energy (sunlight) reflected by the target. Therefore, it should only be used in proper sunlight. Otherwise, there will be nothing to remember.</p>
+</section>
+</section>
+<section id="remotely-data-and-processing-methods" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="remotely-data-and-processing-methods"><span class="header-section-number">1.2</span> Remotely Data and Processing Methods</h2>
+<section id="landsat-data-and-sentinel-data" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="landsat-data-and-sentinel-data"><span class="header-section-number">1.2.1</span> Landsat Data and Sentinel Data</h3>
+<p>Landsat and Sentinel sensors provide medium to high spatial resolution multispectral data for various applications. Through the synergistic use of Landsat and Sentinel data, it is expected to improve timely and accurate observations of the Earth’s surface and dynamics.</p>
+<p>Landsat is a scientific Earth observation mission of NASA and the U.S. Geological Survey (USGS) that regularly captures images of the globe. Since its first launch in 1972, Landsat has collected data on forests, farmland, urban areas and freshwater, producing the longest continuous record of its kind. The Sentinel satellite is a European Space Agency (ESA) satellite designed to provide a large amount of data and images for Europe’s Copernicus program. Sentinel-1 has bipolar orbiting satellites to provide spatial data for environmental and security assurances and global economic and commercial growth.</p>
+</section>
+<section id="processing-methods" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="processing-methods"><span class="header-section-number">1.2.2</span> Processing Methods</h3>
+<p>Standard processing methods for remote sensing data include the following:</p>
+<p>The Tasseled-Cap transformation method converts remote sensing image data into three principal components to better describe the land cover type. The three main components are “brightness”, “greenness”, and “humidity”, which can be used to identify land use types and monitor vegetation growth status.</p>
+<p>The Normalized Vegetation Index is a widely used index to measure vegetation cover. NDVI calculations are based on the ratio between infrared and visible bands and can be used to monitor vegetation growth, estimate vegetation productivity, and more.</p>
+<p>Principal Component Analysis (PCA): This method converts multiband remote sensing data into several principal components to characterise the land cover type better. This method can classify and monitor land use change, vegetation growth, etc.</p>
+</section>
+<section id="applications" class="level3" data-number="1.2.3">
+<h3 data-number="1.2.3" class="anchored" data-anchor-id="applications"><span class="header-section-number">1.2.3</span> Applications</h3>
+</section>
+<section id="agriculture-and-forestry" class="level3" data-number="1.2.4">
+<h3 data-number="1.2.4" class="anchored" data-anchor-id="agriculture-and-forestry"><span class="header-section-number">1.2.4</span> Agriculture and Forestry</h3>
+<p>It can monitor vegetation cover, land-use change, drought and disasters, etc., to help crop production and forest management. Time series from the Landsat and Sentinel-2 satellites have great potential for simulating vegetation seasonality<span class="citation" data-cites="jönsson2018">(<a href="references.html#ref-jönsson2018" role="doc-biblioref">Jönsson et al. 2018</a>)</span>.</p>
+</section>
+<section id="water-management" class="level3" data-number="1.2.5">
+<h3 data-number="1.2.5" class="anchored" data-anchor-id="water-management"><span class="header-section-number">1.2.5</span> Water Management</h3>
+<p>It can monitor changes in water bodies, including water level, flow rate, water temperature, etc., which helps in water management and protection. Using multi-sensor data such as Landsat 7 ETM+, Landsat 8 OLI and Sentinel-1 SAR images as source data, a regional adaptive random forest algorithm can be constructed to realise automatic surface water mapping<span class="citation" data-cites="tang2022">(<a href="references.html#ref-tang2022" role="doc-biblioref">Tang et al. 2022</a>)</span>.</p>
+</section>
+</section>
+<section id="reflaction" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="reflaction"><span class="header-section-number">1.3</span> Reflaction</h2>
+<p>Through the above, we can understand the meaning and categories of remote sensing, the processing methods of remote sensing data, and the current related research fields. I believe that remote sensing data has potential development in the following areas.</p>
+<section id="remote-sensing-data-optimisation-based-on-machine-learning" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="remote-sensing-data-optimisation-based-on-machine-learning"><span class="header-section-number">1.3.1</span> Remote Sensing Data Optimisation Based on Machine Learning</h3>
+<p>Remote sensing data are subject to interference from various factors, such as atmospheric disturbance, cloud cover, etc., which may affect the quality and reliability of the data. In the future, multiple technologies, such as machine learning algorithms, can be employed to improve the quality and reliability of data.</p>
+</section>
+<section id="real-time-information-detection-platform" class="level3" data-number="1.3.2">
+<h3 data-number="1.3.2" class="anchored" data-anchor-id="real-time-information-detection-platform"><span class="header-section-number">1.3.2</span> Real-time Information Detection Platform</h3>
+<p>Based on remote sensing data, current affairs feedback the city. Urban planning is dynamic, and urban surface information needs constantly change. Therefore, it is necessary to establish a complete urban surface information monitoring system and a regular feedback mechanism to meet urban planning needs.</p>
+</section>
+<section id="multi-source-data-integration" class="level3" data-number="1.3.3">
+<h3 data-number="1.3.3" class="anchored" data-anchor-id="multi-source-data-integration"><span class="header-section-number">1.3.3</span> Multi-source Data Integration</h3>
+<p>Urban surface information involves multiple aspects, such as terrain, buildings, traffic, vegetation, etc., so multi-source data integration is required. Different data sources have other data formats and resolutions, and effectively integrating this data is challenging. In the future, more data fusion techniques can be adopted.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-catalog2009" class="csl-entry" role="doc-biblioentry">
+<span>“Catalog of Earth Satellite Orbits.”</span> 2009. <a href="https://earthobservatory.nasa.gov/features/OrbitsCatalog">https://earthobservatory.nasa.gov/features/OrbitsCatalog</a>.
+</div>
+<div id="ref-earthsciencedatasystems2019" class="csl-entry" role="doc-biblioentry">
+Earth Science Data Systems, NASA. 2019. <span>“What Is Remote Sensing?”</span> <a href="https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing">https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing</a>.
+</div>
+<div id="ref-jönsson2018" class="csl-entry" role="doc-biblioentry">
+Jönsson, Per, Zhanzhang Cai, Eli Melaas, Mark A. Friedl, and Lars Eklundh. 2018. <span>“A Method for Robust Estimation of Vegetation Seasonality from Landsat and Sentinel-2 Time Series Data.”</span> <em>Remote Sensing</em> 10 (4): 635. <a href="https://doi.org/10.3390/rs10040635">https://doi.org/10.3390/rs10040635</a>.
+</div>
+<div id="ref-tang2022" class="csl-entry" role="doc-biblioentry">
+Tang, Hailong, Shanlong Lu, Muhammad Hasan Ali Baig, Mingyang Li, Chun Fang, and Yong Wang. 2022. <span>“Large-Scale Surface Water Mapping Based on Landsat and Sentinel-1 Images.”</span> <em>Water</em> 14 (9): 1454. <a href="https://doi.org/10.3390/w14091454">https://doi.org/10.3390/w14091454</a>.
+</div>
+</div>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -466,7 +627,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./week2.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">week2</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Sensors: TerraSAR-X and TanDEM-X</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
