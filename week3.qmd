@@ -1,12 +1,49 @@
 # Corrections
 
-This week, students learned about various corrections in remote sensing data and the application scenarios of related applications in practical scientific research. Reflect on what I have learned, how the content in the field relates to future learning and the possibilities for future exploration.
+This week, we learned about various corrections in remote sensing data and the application scenarios of related applications in practical scientific research. Reflect on what I have learned, how the content in the field relates to future learning and the possibilities for future exploration.
 
 ## About the corrections
 
 ### Pre-processing requirements
 
-The remote sensing data acquisition process is affected by several factors that can degrade the quality of the acquired images. This may affect the accuracy of image analysis. The purpose of image correction and restoration is to correct distorted and degraded image data to create a more faithful representation of the original scene. This step is often called preprocessing because it typically extracts information from the image for a specific application before the actual image analysis.
+The remote sensing data acquisition process is affected by several factors that can degrade the quality of the acquired images. This may affect the accuracy of image analysis. The purpose of image correction and restoration is to correct 
+::: panel-tabset
+## Pyramid Scaling
+
+In Earth Engine, the spatial resolution is determined by the output, not the input. The system stores a 'pyramid' of progressively reduced resolution tiles, which adjust depending on the scale of the user's view. The smaller (reduced resolution) layers of the pyramid are calculated through a down-sampling method, such as the *mean* for numeric data, or the *mode* for classification data.
+
+## Lazy Computation
+
+'Lazy' computatio::: panel-tabset
+## Pyramid Scaling
+
+In Earth Engine, the spatial resolution is determined by the output, not the input. The system stores a 'pyramid' of progressively reduced resolution tiles, which adjust depending on the scale of the user's view. The smaller (reduced resolution) layers of the pyramid are calculated through a down-sampling method, such as the *mean* for numeric data, or the *mode* for classification data.
+
+## Lazy Computation
+
+::: panel-tabset
+## Pyramid Scaling
+
+In Earth Engine, the spatial resolution is determined by the output, not the input. The system stores a 'pyramid' of progressively reduced resolution tiles, which adjust depending on the scale of the user's view. The smaller (reduced resolution) layers of the pyramid are calculated through a down-sampling method, such as the *mean* for numeric data, or the *mode* for classification data.
+
+## Lazy Computation
+
+'Lazy' computation refers to the process of only computing the data that are necessary, such as that in the user's current view (if using an interactive display). The window's zoom level and bounds will dynamically control the projection and resolution of the computed data.
+
+## Distributed Computing
+
+The Earth Engine code library provides a suite of inbuilt functions that are designed to maximise performance on the cloud-based computing system. Methods such as parallelisation and distributed computing break down larger jobs to be run across many smaller machines, allowing faster times to produce client output.
+:::'Lazy' computation refers to the process of only computing the data that are necessary, such as that in the user's current view (if using an interactive display). The window's zoom level and bounds will dynamically control the projection and resolution of the computed data.
+
+## Distributed Computing
+
+The Earth Engine code library provides a suite of inbuilt functions that are designed to maximise performance on the cloud-based computing system. Methods such as parallelisation and distributed computing break down larger jobs to be run across many smaller machines, allowing faster times to produce client output.
+:::n refers to the process of only computing the data that are necessary, such as that in the user's current view (if using an interactive display). The window's zoom level and bounds will dynamically control the projection and resolution of the computed data.
+
+## Distributed Computing
+
+The Earth Engine code library provides a suite of inbuilt functions that are designed to maximise performance on the cloud-based computing system. Methods such as parallelisation and distributed computing break down larger jobs to be run across many smaller machines, allowing faster times to produce client output.
+:::distorted and degraded image data to create a more faithful representation of the original scene. This step is often called preprocessing because it typically extracts information from the image for a specific application before the actual image analysis.
 
 A common barrier to using remotely sensed data for nature conservation is the difficulty of obtaining or generating pre-processed data to meet a standard of confidence in its subsequent use. This processing is essential to facilitate physical measurements (e.g., temperature, surface reflectance, altitude) and to compare data obtained from different dates or regions (e.g., reflectance or radar backscatter). For optical and radar data, this preprocessing includes atmospheric and topographic correction, orthorectification, and more, and for lidar, ground echo classification and surface height retrieval
 
@@ -110,7 +147,9 @@ Ten Landsat TM/ETM+ images were used to test the effects of applying an atmosphe
 The application value of the correction method in urban planning is mainly reflected in improving the availability and credibility of remote sensing images to provide a more accurate, detailed and dynamic information source for urban planning. For example, atmospheric correction can eliminate the influence of atmospheric scattering and absorption on image reflectivity, thereby improving the accuracy of feature classification and identification; Orthorectification correction enhances the accuracy of image positioning and measurement by eliminating the effects of terrain undulation and sensor tilt on geometric image distortion.
 
 **Choose the right method**
+
 In future research, it is necessary to carefully select appropriate correction methods and parameters to adapt to different types, resolutions, and temporal and spatial ranges of remote sensing images and other goals, needs and standards of urban planning tasks. Moreover, the data processing process and technical means of the correction method are essential, which can improve the data processing efficiency, reduce the cost of data processing, and enhance the visualisation of data processing.
 
 **Combined with other types of data**
+
 How to combine other data sources and technical means (such as ground observation, GIS, artificial intelligence, etc.) to make up for the limitations and shortcomings of the correction method and expand the application scope and depth of the correction method in urban planning.

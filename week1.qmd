@@ -32,13 +32,13 @@ The light that our eyes can detect is part of the visible spectrum. Much radiati
 
 Resolution plays a vital role in how the data from the sensor is used. Resolution can vary depending on the satellite's orbit and sensor design, and for any dataset, there are four types of resolution to consider: radiation, space, spectrum, and time.
 
--   Radiation resolution is the sensitivity of a remote sensing platform to detect subtle differences in energy.
+Radiation resolution is the sensitivity of a remote sensing platform to detect subtle differences in energy.
 
--   Spatial resolution measures the minimum angular spacing between two objects.
+Spatial resolution measures the minimum angular spacing between two objects.
 
--   The spectral resolution is the number and size of bands in the electromagnetic spectrum that a remote sensing platform can capture.
+The spectral resolution is the number and size of bands in the electromagnetic spectrum that a remote sensing platform can capture. For example, the first two Landsat satellites used a multispectral scanner (MSS) and captured images using four spectral bands.
 
--   Temporal resolution refers to how often imagery is recorded for a particular area.
+Temporal resolution refers to how often imagery is recorded for a particular area.
 
 ### Sensors
 
@@ -87,7 +87,7 @@ Through the above, we can understand the meaning and categories of remote sensin
 ### Remote Sensing Data Optimisation Based on Machine Learning
 
 Remote sensing data are subject to interference from various factors, such as atmospheric disturbance, cloud cover, etc., which may affect the quality and reliability of the data. In the future, multiple technologies, such as machine learning algorithms, can be employed to improve the quality and reliability of data.
-
+ 
 ### Real-time Information Detection Platform
 
 Based on remote sensing data, current affairs feedback the city. Urban planning is dynamic, and urban surface information needs constantly change. Therefore, it is necessary to establish a complete urban surface information monitoring system and a regular feedback mechanism to meet urban planning needs.
