@@ -1,4 +1,116 @@
----
-title: "week2"
-editor: visual
----
+# Corrections
+
+This week, students learned about various corrections in remote sensing data and the application scenarios of related applications in practical scientific research. Reflect on what I have learned, how the content in the field relates to future learning and the possibilities for future exploration.
+
+## About the corrections
+
+### Pre-processing requirements
+
+The remote sensing data acquisition process is affected by several factors that can degrade the quality of the acquired images. This may affect the accuracy of image analysis. The purpose of image correction and restoration is to correct distorted and degraded image data to create a more faithful representation of the original scene. This step is often called preprocessing because it typically extracts information from the image for a specific application before the actual image analysis.
+
+A common barrier to using remotely sensed data for nature conservation is the difficulty of obtaining or generating pre-processed data to meet a standard of confidence in its subsequent use. This processing is essential to facilitate physical measurements (e.g., temperature, surface reflectance, altitude) and to compare data obtained from different dates or regions (e.g., reflectance or radar backscatter). For optical and radar data, this preprocessing includes atmospheric and topographic correction, orthorectification, and more, and for lidar, ground echo classification and surface height retrieval
+
+### Geometric corrections
+
+#### Why do geometric corrections are needed?
+
+All remotely sensed images of the Earth's surface contain many geometric distortions. Distortion is inherent in the acquisition geometry, whether acquired by a multispectral scanner on a satellite, a photographic system on an aircraft, or any other platform/sensor combination, with various geometric distortions. This problem is inherent in remote sensing. These errors can be due to a variety of factors, including one or more of the following[@canada2008]:
+
+-   Viewing angle of sensor optics
+-   The movement of the scanning system
+-   Movement and (in)stability of the platform
+-   Platform height, attitude and speed
+-   The terrain is undulating
+-   The curvature and rotation of the Earth
+
+The sources of geometric distortion and positional errors vary from case to case but are inherent in remote sensing imagery. In most cases, we can eliminate or at least reduce these errors, but they must be considered in each case before attempting to make a measurement or extract more information.
+
+#### The methods of geometric corrections
+
+Geometric corrections are achieved in the following four steps:
+
+-   Get Ground Control Points (GCPs).
+-   Build sensor models
+-   Coordinate transformation
+
+```{r echo=FALSE, out.width = "80%", fig.align='center', cache=TRUE, fig.cap="Coordinate Transformation. Source: [Wiki](http://wiki.awf.forst.uni-goettingen.de/wiki/index.php/Geometric_corrections)"}
+knitr::include_graphics('week3/Coordinate Transformation.jpg')
+```
+
+-   Resampling of pixel values
+
+```{r echo=FALSE, out.width = "80%", fig.align='center', cache=TRUE, fig.cap="Nearest Neighbor Resampling. Source: [Wiki](http://wiki.awf.forst.uni-goettingen.de/wiki/index.php/Geometric_corrections)"}
+knitr::include_graphics('week3/Nearest Neighbor Resampling.jpg')
+```
+
+### Atmospheric corrections
+
+The solar radiation reflected from the Earth's surface to satellite sensors is altered by its interaction with the atmosphere. Atmospheric correction aims to determine the true surface reflectance value (.) by eliminating atmospheric effects in satellite imagery.
+
+```{r echo=FALSE, out.width = "80%", fig.align='center', cache=TRUE, fig.cap="Atmospheric Effect on Remote Sensing Data. Source: [Slide Share](https://www.slideshare.net/YADAVVIVEKA/atmoshpheric-effect-on-remote-sensing-data)"}
+knitr::include_graphics('week3/atmoshpheric-effect-on-remote-sensing-data-4-638.jpg')
+```
+
+The atmospheric effects in optical remote sensing are significant and complex, dramatically altering the spectral properties of the radiation reaching the remote sensor. The atmosphere absorbs and scatters various wavelengths of the visible spectrum that must pass through the atmosphere twice, once from the sun to the object and then propagate again when it returns to the image sensor. These distortions are corrected using a variety of methods and techniques.
+
+```{r echo=FALSE, out.width = "100%", fig.align='center', cache=TRUE, fig.cap="Example of Atmospheric Correction a Landsat Image With Haze Effect Before Correction. Source: [ResearchGate](https://www.researchgate.net/figure/Example-of-atmospheric-correction-a-Landsat-image-with-haze-effect-before-correction_fig4_248978097)"}
+knitr::include_graphics('week3/Example-of-atmospheric-correction-a-Landsat-image-with-haze-effect-before-correction.jpg')
+```
+
+### Orthorectification correction
+
+#### What is Orthorectification correction？
+
+The original satellite imagery contains distortion caused by sensor orientation, terrain changes, and Earth's curvature. When collecting satellite imagery, it needs to be processed using orthorectification to correct for inaccuracies.
+
+Distortion occurs in feature displacement and causes scaling inconsistencies in the image. The distortion level changes throughout the imagery scene, meaning simple ground control point adjustments alone cannot compensate for these errors. The correction process for terrain changes and sensor orientation needs to be considered to rearrange displaced pixels to the correct position.
+
+```{r echo=FALSE, out.width = "100%", fig.align='center', cache=TRUE, fig.cap="Orthorectification Correction. Source: [InterMap](https://www.intermap.com/blog/orthorectification-in-a-nutshell)"}
+knitr::include_graphics('week3/Orthorectification correction.jpg')
+```
+
+#### Accurate elevation models are key
+
+Feature distortion on the original imagery is greatly affected by terrain changes. An accurate elevation model is required to calculate the effect of terrain changes on imagery pixels. This calculation can then pinpoint the pixel to the correct location.
+
+```{r echo=FALSE, out.width = "100%", fig.align='center', cache=TRUE, fig.cap="Ortho Image. Source: [InterMap](https://www.intermap.com/blog/orthorectification-in-a-nutshell)"}
+knitr::include_graphics('week3/Ortho4image1.jpg')
+```
+
+### Radiometric correction
+
+Radiation calibration is crucial for converting raw digital image data from satellite or aerial sensors to a standard physical scale based on known reflectance measurements obtained from ground objects. This type of correction is essential for reliable quantitative measures of images.
+
+Imagery typically begins with an uncalibrated raw number (DN) of the pixel values in the imagery. These DN values are converted to radiance through a series of gains and offsets provided by the app data provider. The degree of radioactivity depends on the illumination (intensity and direction), the law and location of the target feature to be imaged, and the path of light through the atmosphere.
+
+## Applications
+
+### Use machine learning to compare the accuracy of various atmospheric correction methods
+
+Atmospheric correction is one of the critical parts of remote sensing preprocessing, as it can influence and alter the final classification results. Sentinel-2 satellite imagery was used to study the effects of five different atmospheric correction treatments on land cover classification accuracy. These are Surface Reflectance (SREF), Standardized Surface Reflectance (STDSREF), Sentinel-2 Atmospheric Correction (S2AC), Atmospheric Effects Image Correction (iCOR), Dark Object Subtraction (DOS), and Atmospheric Top (TOA) Reflectivity without any atmospheric correction[@rumora2020].
+
+```{r echo=FALSE, out.width = "80%", fig.align='center', cache=TRUE, fig.cap="The workflow of processing Sentinel-2. Source: [MDPI](https://www.mdpi.com/2220-9964/9/4/277)"}
+knitr::include_graphics('week3/The workflow of processing Sentinel-2.jpg')
+```
+
+Sentinel-2 images using atmosphere correction are classified using four machine learning techniques[@rumora2020]. SVM classification provides the best overall results for all atmospheric disciplines.
+
+```{r echo=FALSE, out.width = "80%", fig.align='center', cache=TRUE, fig.cap="Classification maps for four classification techniques and six atmospheric corrections. Source: [MDPI](https://www.mdpi.com/2220-9964/9/4/277)"}
+knitr::include_graphics('week3/Classification maps for 12 June 2018 for four classification techniques and six atmospheric corrections.jpg')
+```
+
+### Atmospheric correction of satellite remote sensing data for agricultural use
+
+For agricultural applications, multiple vegetation indices are applied for monitoring using multi-temporal imagery. Combining vegetation indices from remote sensing imagery with other hydrometeorological data, it widely monitors natural disasters such as droughts. The most important task is to retrieve the actual value of the state of vegetation from satellite remote sensing data.
+
+Ten Landsat TM/ETM+ images were used to test the effects of applying an atmospheric correction to retrieve accurate vegetation index and evapotranspiration[@hadjimitsis2010]. It was found that the calculation of the DVI, NDVI, SAVI and MSAVI indices should consider the influence of the atmosphere. Only SARVI was found unaffected by the atmosphere. Effects of the atmosphere. The results of the atmosphere are variable, and the impact on crops is significant.
+
+## Reflaction
+
+The application value of the correction method in urban planning is mainly reflected in improving the availability and credibility of remote sensing images to provide a more accurate, detailed and dynamic information source for urban planning. For example, atmospheric correction can eliminate the influence of atmospheric scattering and absorption on image reflectivity, thereby improving the accuracy of feature classification and identification; Orthorectification correction enhances the accuracy of image positioning and measurement by eliminating the effects of terrain undulation and sensor tilt on geometric image distortion.
+
+**Choose the right method**
+In future research, it is necessary to carefully select appropriate correction methods and parameters to adapt to different types, resolutions, and temporal and spatial ranges of remote sensing images and other goals, needs and standards of urban planning tasks. Moreover, the data processing process and technical means of the correction method are essential, which can improve the data processing efficiency, reduce the cost of data processing, and enhance the visualisation of data processing.
+
+**Combined with other types of data**
+How to combine other data sources and technical means (such as ground observation, GIS, artificial intelligence, etc.) to make up for the limitations and shortcomings of the correction method and expand the application scope and depth of the correction method in urban planning.
