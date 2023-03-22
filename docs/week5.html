@@ -8,7 +8,7 @@
 
 <meta name="description" content="This is my learning diary for the CASA0023 course. I will share my notes, exercises, and reflections on a weekly basis.">
 
-<title>Learning Diary CASA0023 - 5&nbsp; week2</title>
+<title>Learning Diary CASA0023 - 5&nbsp; Google earth engine(GEE)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -87,7 +87,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/111vdfsvds/CASA23_Quarto"><i class="bi bi-github" role="img" aria-label="Source Code">
+    <a class="nav-link" href="https://github.com/111vdfsvds/CASA23_Quarto"><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -106,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">week2</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google earth engine(GEE)</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -131,27 +131,27 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">week1</span></a>
+  <a href="./week1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Remote Sensing</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">week2</span></a>
+  <a href="./week2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Sensors: TerraSAR-X and TanDEM-X</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week3.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">week2</span></a>
+  <a href="./week3.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week4.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">week2</span></a>
+  <a href="./week4.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Policy</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week5.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">week2</span></a>
+  <a href="./week5.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google earth engine(GEE)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -184,14 +184,32 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">5.1</span>  Summary</a>
+  <ul class="collapse">
+  <li><a href="#what-is-gee" id="toc-what-is-gee" class="nav-link" data-scroll-target="#what-is-gee"><span class="toc-section-number">5.1.1</span>  What is GEE?</a></li>
+  <li><a href="#features-of-gee" id="toc-features-of-gee" class="nav-link" data-scroll-target="#features-of-gee"><span class="toc-section-number">5.1.2</span>  Features of GEE</a></li>
+  <li><a href="#main-functions" id="toc-main-functions" class="nav-link" data-scroll-target="#main-functions"><span class="toc-section-number">5.1.3</span>  Main functions</a></li>
+  <li><a href="#data-category" id="toc-data-category" class="nav-link" data-scroll-target="#data-category"><span class="toc-section-number">5.1.4</span>  Data category</a></li>
+  </ul></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="toc-section-number">5.2</span>  Applications</a>
+  <ul class="collapse">
+  <li><a href="#high-resolution-global-map-of-forest-cover-change-in-the-21st-century" id="toc-high-resolution-global-map-of-forest-cover-change-in-the-21st-century" class="nav-link" data-scroll-target="#high-resolution-global-map-of-forest-cover-change-in-the-21st-century"><span class="toc-section-number">5.2.1</span>  High-resolution global map of forest cover change in the 21st century</a></li>
+  <li><a href="#google-gee-makes-maps-to-predict-malaria" id="toc-google-gee-makes-maps-to-predict-malaria" class="nav-link" data-scroll-target="#google-gee-makes-maps-to-predict-malaria"><span class="toc-section-number">5.2.2</span>  Google GEE makes maps to predict malaria</a></li>
+  </ul></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">5.3</span>  Reflection</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">week2</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google earth engine(GEE)</span></h1>
 </div>
 
 
@@ -206,8 +224,115 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="summary" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">5.1</span> Summary</h2>
+<section id="what-is-gee" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="what-is-gee"><span class="header-section-number">5.1.1</span> What is GEE?</h3>
+<p>GEE is a platform for the scientific analysis and visualisation of geospatial datasets for academic, nonprofit, enterprise, and government users.</p>
+<p>It hosts satellite imagery and stores it in a public data archive that includes historical Earth images from more than four decades ago. The images ingested daily can then be used for data mining on a global scale, and GEE combines satellite imagery and geospatial dataset catalogues with planetary-scale analysis capabilities. Scientists, researchers, and developers use GEE to detect changes, map trends, and quantify differences in the Earth’s surface.</p>
+<div class="cell" data-layout-align="center" data-hash="week5_cache/html/unnamed-chunk-1_0b8c830d3fb8414926abcac5ee3847ea">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week5/Google earth engine.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Google earth engine. Source: <a href="https://code.earthengine.google.com/">Google Earth Engine</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="features-of-gee" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="features-of-gee"><span class="header-section-number">5.1.2</span> Features of GEE</h3>
+<p>GEE stores more than three decades of historical images and scientific datasets, updated and expanded daily. It organises and makes them available to the public, businesses, and management systems.</p>
+<p>GEE provides easy, web-based access to an extensive catalogue of satellite imagery and other geospatial data in an analytics-ready format. Data Catalog, combined with scalable computing power supported by Google data centres and flexible APIs, enables seamless implementation of existing geospatial workflows. This enables advanced, global-scale analysis and visualisation.</p>
+</section>
+<section id="main-functions" class="level3" data-number="5.1.3">
+<h3 data-number="5.1.3" class="anchored" data-anchor-id="main-functions"><span class="header-section-number">5.1.3</span> Main functions</h3>
+<p>It mainly includes the following three types of functions.</p>
+<blockquote class="blockquote">
+<p><em>It is an advanced cloud-based geospatial processing platform primarily used for planetary-scale environmental data analysis. It combines satellite imagery and petabytes of geospatial datasets to enable users to visualise, manipulate, edit, and create spatial data simply and quickly. It combines various space manipulation tools to help scientists, researchers, and developers to detect changes, map trends, and quantify differences on the Earth’s surface.</em></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><em>Integration with Python and JavaScript through its API. APIs for JavaScript and Python (hosted on GitHub) for making requests to the GEE server. These documents focus on JavaScript; (Javascript API Getting Started Guide). For Python, see the Python installation guide and Python examples in the Earth Engine GitHub repository. </em></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><em>Use our web-based code editor for fast, interactive algorithm development and instant access to petabytes of data. Code Editor: An online integrated development environment (IDE) for rapid prototyping and visualising complex spatial analysis using Javascript APIs. Learn about the code editor documentation.</em></p>
+</blockquote>
+</section>
+<section id="data-category" class="level3" data-number="5.1.4">
+<h3 data-number="5.1.4" class="anchored" data-anchor-id="data-category"><span class="header-section-number">5.1.4</span> Data category</h3>
+<p>Google GEE allows geospatial data from the Landsat satellite program to observe dynamic changes in agriculture, natural resources and climate, which passes through the same places on Earth every sixteen days. Google GEE has become a platform where researchers can easily access Landsat and Sentinel-2 data by partnering with Google Cloud Storage. Google GEE provides a data catalogue and computers for analysis; This allows scientists to collaborate using data, algorithms, and visualisations.</p>
+<div class="cell" data-layout-align="center" data-hash="week5_cache/html/unnamed-chunk-2_ad04107ad8e4473eb9ac0400c35cde3a">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week5/Earth Engine Data Catalog.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Earth Engine Data Catalog. Source: <a href="https://developers.google.com/earth-engine/datasets/catalog">Google Developer</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="applications" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">5.2</span> Applications</h2>
+<section id="high-resolution-global-map-of-forest-cover-change-in-the-21st-century" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="high-resolution-global-map-of-forest-cover-change-in-the-21st-century"><span class="header-section-number">5.2.1</span> High-resolution global map of forest cover change in the 21st century</h3>
+<p>Forests worldwide are in flux, with losses accelerating in some regions and gains accelerating in others. Global Landsat data were examined with a spatial resolution of 30 meters to characterise forest extent, loss, and profits from 2000 to 2012. Globally, 30,000 square kilometres of forest were lost, and 120,000 square kilometres of new forests were added during the 2-year study period. The tropics have the most significant losses (through regeneration and planting), the gains are the greatest, and the losses outweigh the gains.</p>
+<section id="research-method" class="level4" data-number="5.2.1.1">
+<h4 data-number="5.2.1.1" class="anchored" data-anchor-id="research-method"><span class="header-section-number">5.2.1.1</span> Research method</h4>
+<p>Global tree coverage, losses, and gains for 2012-30 were mapped at a spatial resolution of 2000 m, with losses distributed annually. Global analysis based on Landsat data quantifies total forest loss and gains through spatial clarity, provides annual loss information and quantifies forest loss trends; and through an internally consistent approach.</p>
+<div class="cell" data-layout-align="center" data-hash="week5_cache/html/unnamed-chunk-3_5ba51dcadae9490d4e25e98ec632906c">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week5/(A) Tree cover, (B) forest loss, and (C) forest gain.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">(A) Tree cover, (B) forest loss, and (C) forest gain. Source: <a href="https://www.science.org/doi/10.1126/science.1244693">science</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="results" class="level4" data-number="5.2.1.2">
+<h4 data-number="5.2.1.2" class="anchored" data-anchor-id="results"><span class="header-section-number">5.2.1.2</span> Results</h4>
+<p>Results of time series analysis of Landsat imagery depicting forest extent and change.</p>
+<div class="cell" data-layout-align="center" data-hash="week5_cache/html/unnamed-chunk-4_959272b107719b8c0853eefc79ba6ebb">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week5/Global Forest Change.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Global Forest Change. Source: <a href="https://glad.earthengine.app/view/global-forest-change#dl=1;old=off;bl=off;lon=143.87148264923147;lat=44.14304010707153;zoom=2;">Earthengine</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="google-gee-makes-maps-to-predict-malaria" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="google-gee-makes-maps-to-predict-malaria"><span class="header-section-number">5.2.2</span> Google GEE makes maps to predict malaria</h3>
+<p>The University of California, San Francisco (UCSF) is working to create an online platform where health workers worldwide can use data from Google GEE to predict where malaria is likely to spread.</p>
+<div class="cell" data-layout-align="center" data-hash="week5_cache/html/unnamed-chunk-5_daf9a36c3009a0bf7065f7cbd4d1e6fd">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week5/A sample risk map of malaria in Swaziland during the transmission season using data from 2011-2013.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">A sample risk map of malaria in Swaziland during the transmission season using data from 2011-2013. Source: <a href="https://www.ucsf.edu/news/2014/09/116906/ucsf-google-earth-engine-making-maps-predict-malaria">UCSF</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Through the malaria prediction platform, local health workers can upload their data on where and when malaria cases occur and combine it with real-time satellite data of weather and other environmental conditions within GEE to determine where new patients are most likely to happen. That way, instead of covering entire countries, they can spray insecticides, distribute mosquito nets or provide antimalarial drugs to those who still need them.</p>
+</section>
+</section>
+<section id="reflection" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">5.3</span> Reflection</h2>
+<p>Google Earth Engine is a powerful geospatial processing platform that provides powerful tools and resources to support research and decision-making in urban planning, policy, and governance.</p>
+<p>Google Earth Engine provides rich geographic information datasets that can be used for spatial analysis in urban planning and policy-making. For example, land cover type data can be used to assess the impact of urban sprawl and land-use change, as well as improvements in urban green cover and air quality. At the same time, Google Earth Engine also provides data from multiple dimensions such as climate, environment and population data, which can help city planners and policymakers better understand the trends and challenges of urban development.</p>
+<p>Besides, Google Earth Engine’s data open platform has also improved research efficiency in related professional fields. With the analysis tools and data provided by the forum, we can perform data analysis and model building faster, speeding up the research process. For example, researchers can use Google Earth Engine to analyse factors affecting changes in urban surface temperature and the impact of urbanisation on land use and ecosystems.</p>
+<p>In addition, Google Earth Engine provides a dynamic remote sensing information platform that can help decision-makers in city-related professional fields better understand the dynamics of urban development. Through remote sensing technology, the development and changes of cities can be monitored in real-time, including changes in urban expansion, building height, traffic flow, etc. This information can provide strong data support for urban planning and policy.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -461,7 +586,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./week4.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">week2</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Policy</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

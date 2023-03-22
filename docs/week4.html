@@ -21,6 +21,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -151,7 +170,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week5.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">week2</span></a>
+  <a href="./week5.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google earth engine(GEE)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -230,7 +249,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="4.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">4.1</span> Summary</h2>
 <section id="city-introduction" class="level3" data-number="4.1.1">
 <h3 data-number="4.1.1" class="anchored" data-anchor-id="city-introduction"><span class="header-section-number">4.1.1</span> City introduction</h3>
-<p>Ahmedabad is the most populous city in the Indian state of Gujarat. It is the administrative headquarters of the Ahmedabad District. With a population of 5,570,585 (as of the 2011 census), Ahmedabad is India’s fifth most populous city. Ahmedabad has become an important economic and industrial hub in India.</p>
+<p>Ahmedabad is the most populous city in the Indian state of Gujarat. It is the administrative headquarters of the Ahmedabad District. With a population of 5,570,585 (as of the 2011 census), Ahmedabad is India’s fifth most populous city, and Ahmedabad has become an important economic and industrial hub in India<span class="citation" data-cites="ahmedaba2023">(<a href="references.html#ref-ahmedaba2023" role="doc-biblioref"><span>“Ahmedabad”</span> 2023</a>)</span>.</p>
 <div class="cell" data-layout-align="center" data-hash="week4_cache/html/unnamed-chunk-1_62bc20acbc3b8e0414c3aba28096a614">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -297,7 +316,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 data-number="4.2.1" class="anchored" data-anchor-id="execution-of-the-heat-plan"><span class="header-section-number">4.2.1</span> Execution of the heat plan</h3>
 <p><strong>Stage 1: is the preheating phase (January to March)</strong></p>
 <p>Personnel are trained, public information is conducted, and medical treatment and other preparations are made in advance.</p>
-<p><strong>Stage 2: High-temperature season </strong> According to the plan, implement the heat wave response process and make targeted adjustments for different degrees of a heat waves.</p>
+<p><strong>Stage 2: High-temperature season</strong> According to the plan, implement the heat wave response process and make targeted adjustments for different degrees of a heat waves.</p>
 <div class="cell" data-layout-align="center" data-hash="week4_cache/html/unnamed-chunk-4_4c692eb99aa9200067db887495354e58">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -313,28 +332,17 @@ ul.task-list li input[type="checkbox"] {
 <section id="use-remote-sensing-data-to-monitor-heat-levels-in-different-areas-of-the-city" class="level3" data-number="4.2.2">
 <h3 data-number="4.2.2" class="anchored" data-anchor-id="use-remote-sensing-data-to-monitor-heat-levels-in-different-areas-of-the-city"><span class="header-section-number">4.2.2</span> Use remote sensing data to monitor heat levels in different areas of the city</h3>
 <p>The guidelines propose a detailed organisational plan for the policy process but do not use remote sensing data for relevant detection and early warning. Referring to related papers, remote sensing data can be used to obtain detailed region-specific spatial information on urban thermal vulnerability distribution, which is valuable for informed urban heat mitigation, planning and decision-making.</p>
-<p>Using the biophysical surface properties and sociodemographic factors derived from Landsat-8, it is possible to analyse and explore the thermal situation and thermal vulnerability of different areas in the city, and the relevant conclusions can help urban governance. Studies have shown a strong spatial correlation between thermal susceptibility and observed surface temperature during the hot season. Surface temperature is a good indicator of thermal vulnerability in the region.</p>
+<p>Using the biophysical surface properties and sociodemographic factors derived from Landsat-8, it is possible to analyse and explore the thermal situation and thermal vulnerability of different areas in the city, and the relevant conclusions can help urban governance. Studies have shown a strong spatial correlation between thermal susceptibility and observed surface temperature during the hot season<span class="citation" data-cites="mushore2018">(<a href="references.html#ref-mushore2018" role="doc-biblioref">Mushore et al. 2018</a>)</span>. Surface temperature is a good indicator of thermal vulnerability in the region.</p>
 </section>
 <section id="thermal-vulnerability-and-land-use-types" class="level3" data-number="4.2.3">
 <h3 data-number="4.2.3" class="anchored" data-anchor-id="thermal-vulnerability-and-land-use-types"><span class="header-section-number">4.2.3</span> Thermal vulnerability and land-use types</h3>
-<p>Based on factors derived from biophysical indices and socio-demographic variables obtained from Landsat 8, areas of thermal vulnerability within cities can be predicted. The potential vulnerability of city dwellers to extreme heat is assessed based on the Thermal Vulnerability Index, which uses standardised indices of physical exposure to high temperatures (NDVI, NDBI and NDWI) and socio-demographic factors. With NDBI and NDVI for vulnerability mapping, NDWI for surface water content and detailed quantification of vegetation health were included. These indices were retrieved using data from the recently launched Landsat 8 mission, taking advantage of radiometry and spectral resolution improvements compared to earlier Landsat missions. It can be demonstrated that vulnerabilities vary widely in space. Thermal vulnerability maps drawn at 30-meter resolution improve spatial detail and are essential for area-specific interventions within cities.</p>
+<p>Based on factors derived from biophysical indices and socio-demographic variables obtained from Landsat 8, areas of thermal vulnerability within cities can be predicted. The potential vulnerability of city dwellers to extreme heat is assessed based on the Thermal Vulnerability Index, which uses standardised indices of physical exposure to high temperatures (NDVI, NDBI and NDWI) and socio-demographic factors. With NDBI and NDVI for vulnerability mapping, NDWI for surface water content and detailed quantification of vegetation health were included. These indices were retrieved using data from the recently launched Landsat 8 mission, taking advantage of radiometry and spectral resolution improvements compared to earlier Landsat missions. It can be demonstrated that vulnerabilities vary widely in space. Thermal vulnerability maps drawn at 30-meter resolution improve spatial detail and are essential for area-specific interventions within cities<span class="citation" data-cites="mushore2018">(<a href="references.html#ref-mushore2018" role="doc-biblioref">Mushore et al. 2018</a>)</span>.</p>
 <div class="cell" data-layout-align="center" data-hash="week4_cache/html/unnamed-chunk-5_4f34b4ed222b51711deeda115ce9caf5">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="week4/Distribution of (a) heat vulnerability and (b) land use and land cover (LULC) types in Harare..jpg" class="img-fluid figure-img" style="width:100.0%"></p>
 <p></p><figcaption class="figure-caption">Distribution of (a) heat vulnerability and (b) land use and land cover (LULC) types in Harare. Source: <a href="https://www.tandfonline.com/doi/full/10.1080/14498596.2017.1290558">Taylor</a></figcaption><p></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Areas with high thermal vulnerability are also at increased risk, as these areas also record high surface temperatures. Thermal susceptibility is spatially correlated with temperature during hot seasons. High temperatures are observed in the south and west, with moderate to high thermal vulnerability. It has been observed that the temperature in the northeast of the city is low, mostly between 17 and 25°C; Thermal exposure is also mapped as low. Low temperatures and fragility are also observed in the southeasternmost region, where large bodies of water are located.</p>
-<div class="cell" data-layout-align="center" data-hash="week4_cache/html/unnamed-chunk-6_95d7007b5ac6f03b9fff6c644a0a8bd2">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="week4/Mapped vulnerability of Harare to high surface temperatures (a) and its link to surface temperature observed on 30 October 2015 (b)..jpg" class="img-fluid figure-img" style="width:100.0%"></p>
-<p></p><figcaption class="figure-caption">Mapped vulnerability of Harare to high surface temperatures (a) and its link to surface temperature observed on 30 October 2015 (b). Source: <a href="https://www.tandfonline.com/doi/full/10.1080/14498596.2017.1290558">Taylor</a></figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -353,6 +361,14 @@ ul.task-list li input[type="checkbox"] {
 <p>Remote sensing data can also be used to predict the frequency and intensity of urban heat waves, provide scientific basis for urban planning and construction, and mitigate the impact of urban heat island effect. Remote sensing data has the potential to play an important role and potential in urban heat wave research.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-ahmedaba2023" class="csl-entry" role="doc-biblioentry">
+<span>“Ahmedabad.”</span> 2023. <a href="https://en.wikipedia.org/w/index.php?title=Ahmedabad&amp;oldid=1145698881#Culture">https://en.wikipedia.org/w/index.php?title=Ahmedabad&amp;oldid=1145698881#Culture</a>.
+</div>
+<div id="ref-mushore2018" class="csl-entry" role="doc-biblioentry">
+Mushore, Terence D., Onisimo Mutanga, John Odindi, and Timothy Dube. 2018. <span>“Determining Extreme Heat Vulnerability of Harare Metropolitan City Using Multispectral Remote Sensing and Socio-Economic Data.”</span> <em>Journal of Spatial Science</em> 63 (1): 173–91. <a href="https://doi.org/10.1080/14498596.2017.1290558">https://doi.org/10.1080/14498596.2017.1290558</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -612,7 +628,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./week5.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">week2</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google earth engine(GEE)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

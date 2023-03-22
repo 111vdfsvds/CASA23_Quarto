@@ -4,7 +4,7 @@
 
 ### City introduction
 
-Ahmedabad is the most populous city in the Indian state of Gujarat. It is the administrative headquarters of the Ahmedabad District. With a population of 5,570,585 (as of the 2011 census), Ahmedabad is India’s fifth most populous city. Ahmedabad has become an important economic and industrial hub in India.
+Ahmedabad is the most populous city in the Indian state of Gujarat. It is the administrative headquarters of the Ahmedabad District. With a population of 5,570,585 (as of the 2011 census), Ahmedabad is India's fifth most populous city, and Ahmedabad has become an important economic and industrial hub in India[@ahmedaba2023].
 
 ```{r echo=FALSE, out.width = "100%", fig.align='center', cache=TRUE, fig.cap="Ahmedabad cityscape. Source: [Wiki](https://en.wikipedia.org/wiki/Ahmedabad)"}
 knitr::include_graphics('week4/Ahmedabad cityscape.jpg')
@@ -20,28 +20,23 @@ knitr::include_graphics('week4/Ahmedabad community members, July 2011..jpg')
 
 ### The goal
 
-The High-Temperature Action Plan aims to provide a framework for implementing, coordinating and evaluating extreme heat response activities in Ahmedabad to reduce the negative health impacts of extreme heat. The program’s primary goal is to alert those most at risk of heat-related illness that extreme heat conditions are imminent and to take appropriate precautions.
+The High-Temperature Action Plan aims to provide a framework for implementing, coordinating and evaluating extreme heat response activities in Ahmedabad to reduce the negative health impacts of extreme heat. The program's primary goal is to alert those most at risk of heat-related illness that extreme heat conditions are imminent and to take appropriate precautions.
 
 ### Policy strategies
 
 The strategy consists of the following four steps:
 
+> *Build public awareness and community outreach to communicate the risks of heat waves and take steps to prevent heat-related deaths and diseases. Spread general information on protecting people from extreme heat through media channels and information materials, such as brochures and advertisements on heat stress prevention. As part of this year's plan, new efforts include using modern media such as SMS, SMS, email, radio and mobile apps such as WhatsApp. Special efforts will be made to reach vulnerable groups through interpersonal communication and other outreach methods.*
 
->*Build public awareness and community outreach to communicate the risks of heat waves and take steps to prevent heat-related deaths and diseases. Spread general information on protecting people from extreme heat through media channels and information materials, such as brochures and advertisements on heat stress prevention. As part of this year's plan, new efforts include using modern media such as SMS, SMS, email, radio and mobile apps such as WhatsApp. Special efforts will be made to reach vulnerable groups through interpersonal communication and other outreach methods.*
+> *Activate early warning systems and inter-agency coordination to alert residents to expected high temperatures and extremes. The U.S. Weather Center has established formal communication channels to disseminate forecasts of extreme temperatures to government agencies, weather centres, health officials and hospitals, emergency responders, local community groups, and the media.*
 
+> *Capacity building of health care professionals to identify and respond to heat-related illnesses, especially during extreme heat events. This training focuses on primary and other paramedical personnel and community health workers so that they can effectively prevent and manage heat-related cases, thereby reducing mortality and morbidity.*
 
->*Activate early warning systems and inter-agency coordination to alert residents to expected high temperatures and extremes. The U.S. Weather Center has established formal communication channels to disseminate forecasts of extreme temperatures to government agencies, weather centres, health officials and hospitals, emergency responders, local community groups, and the media.*
-
-
->*Capacity building of health care professionals to identify and respond to heat-related illnesses, especially during extreme heat events. This training focuses on primary and other paramedical personnel and community health workers so that they can effectively prevent and manage heat-related cases, thereby reducing mortality and morbidity.*
-
-
->*Through new efforts, including mapping high-risk areas of cities, increased dissemination and communication of prevention methods, access to drinking water and cooling spaces on sweltering days, reduced heat exposure and promotion of adaptation measures. Cooperation with NGOs was also identified as a means of expanding outreach and communication with the city's most at-risk communities.*
-
+> *Through new efforts, including mapping high-risk areas of cities, increased dissemination and communication of prevention methods, access to drinking water and cooling spaces on sweltering days, reduced heat exposure and promotion of adaptation measures. Cooperation with NGOs was also identified as a means of expanding outreach and communication with the city's most at-risk communities.*
 
 ### The effect of the implementation of the policy
 
-This graph shows the relationship between heat waves and mortality. Initial evaluations of the 2013 and 2014 High Temperature Action Plans have shown positive results in reducing mortality during the year’s hottest months. During India's historic heat wave in 2015, more than 2,300 people died nationwide, and Ahmedabad reported fewer than 20 heat-related deaths. Future responses must be based on understanding the action and evidence of its impact. 
+This graph shows the relationship between heat waves and mortality. Initial evaluations of the 2013 and 2014 High Temperature Action Plans have shown positive results in reducing mortality during the year's hottest months. During India's historic heat wave in 2015, more than 2,300 people died nationwide, and Ahmedabad reported fewer than 20 heat-related deaths. Future responses must be based on understanding the action and evidence of its impact.
 
 ```{r echo=FALSE, out.width = "100%", fig.align='center', cache=TRUE, fig.cap="Temperature and all-cause mortality correlation during the 2010 heat wave. Source: [Ahmedabad 2016 Heat Action Plan](https://www.nrdc.org/sites/default/files/ahmedabad-heat-action-plan-2016.pdf)"}
 knitr::include_graphics('week4/Temperature and all-cause mortality correlation during the 2010 heat wave in Ahmedabad as compared to 2009.jpg')
@@ -55,47 +50,39 @@ knitr::include_graphics('week4/Temperature and all-cause mortality correlation d
 
 Personnel are trained, public information is conducted, and medical treatment and other preparations are made in advance.
 
-**Stage 2: High-temperature season **
-According to the plan, implement the heat wave response process and make targeted adjustments for different degrees of a heat waves.
+**Stage 2: High-temperature season** According to the plan, implement the heat wave response process and make targeted adjustments for different degrees of a heat waves.
 
 ```{r echo=FALSE, out.width = "100%", fig.align='center', cache=TRUE, fig.cap="Communication Plan When the AMC Nodal Officer Activates a Heat Alert. Source: [Ahmedabad 2016 Heat Action Plan](https://www.nrdc.org/sites/default/files/ahmedabad-heat-action-plan-2016.pdf)"}
 knitr::include_graphics('week4/Communication Plan When the AMC Nodal Officer Activates a Heat Alert.jpg')
 ```
 
-**The third stage is the late development period**
-Organise assessment reviews, summarise relevant data and adjust heatwave plans.
+**The third stage is the late development period** Organise assessment reviews, summarise relevant data and adjust heatwave plans.
 
 ### Use remote sensing data to monitor heat levels in different areas of the city
 
-The guidelines propose a detailed organisational plan for the policy process but do not use remote sensing data for relevant detection and early warning. Referring to related papers, remote sensing data can be used to obtain detailed region-specific spatial information on urban thermal vulnerability distribution, which is valuable for informed urban heat mitigation, planning and decision-making. 
+The guidelines propose a detailed organisational plan for the policy process but do not use remote sensing data for relevant detection and early warning. Referring to related papers, remote sensing data can be used to obtain detailed region-specific spatial information on urban thermal vulnerability distribution, which is valuable for informed urban heat mitigation, planning and decision-making.
 
-Using the biophysical surface properties and sociodemographic factors derived from Landsat-8, it is possible to analyse and explore the thermal situation and thermal vulnerability of different areas in the city, and the relevant conclusions can help urban governance. Studies have shown a strong spatial correlation between thermal susceptibility and observed surface temperature during the hot season. Surface temperature is a good indicator of thermal vulnerability in the region.
+Using the biophysical surface properties and sociodemographic factors derived from Landsat-8, it is possible to analyse and explore the thermal situation and thermal vulnerability of different areas in the city, and the relevant conclusions can help urban governance. Studies have shown a strong spatial correlation between thermal susceptibility and observed surface temperature during the hot season[@mushore2018]. Surface temperature is a good indicator of thermal vulnerability in the region.
 
 ### Thermal vulnerability and land-use types
 
-Based on factors derived from biophysical indices and socio-demographic variables obtained from Landsat 8, areas of thermal vulnerability within cities can be predicted.  The potential vulnerability of city dwellers to extreme heat is assessed based on the Thermal Vulnerability Index, which uses standardised indices of physical exposure to high temperatures (NDVI, NDBI and NDWI) and socio-demographic factors. With NDBI and NDVI for vulnerability mapping, NDWI for surface water content and detailed quantification of vegetation health were included. These indices were retrieved using data from the recently launched Landsat 8 mission, taking advantage of radiometry and spectral resolution improvements compared to earlier Landsat missions. It can be demonstrated that vulnerabilities vary widely in space. Thermal vulnerability maps drawn at 30-meter resolution improve spatial detail and are essential for area-specific interventions within cities. 
+Based on factors derived from biophysical indices and socio-demographic variables obtained from Landsat 8, areas of thermal vulnerability within cities can be predicted. The potential vulnerability of city dwellers to extreme heat is assessed based on the Thermal Vulnerability Index, which uses standardised indices of physical exposure to high temperatures (NDVI, NDBI and NDWI) and socio-demographic factors. With NDBI and NDVI for vulnerability mapping, NDWI for surface water content and detailed quantification of vegetation health were included. These indices were retrieved using data from the recently launched Landsat 8 mission, taking advantage of radiometry and spectral resolution improvements compared to earlier Landsat missions. It can be demonstrated that vulnerabilities vary widely in space. Thermal vulnerability maps drawn at 30-meter resolution improve spatial detail and are essential for area-specific interventions within cities[@mushore2018].
 
 ```{r echo=FALSE, out.width = "100%", fig.align='center', cache=TRUE, fig.cap="Distribution of (a) heat vulnerability and (b) land use and land cover (LULC) types in Harare. Source: [Taylor](https://www.tandfonline.com/doi/full/10.1080/14498596.2017.1290558)"}
 knitr::include_graphics('week4/Distribution of (a) heat vulnerability and (b) land use and land cover (LULC) types in Harare..jpg')
 ```
 
-Areas with high thermal vulnerability are also at increased risk, as these areas also record high surface temperatures. Thermal susceptibility is spatially correlated with temperature during hot seasons. High temperatures are observed in the south and west, with moderate to high thermal vulnerability. It has been observed that the temperature in the northeast of the city is low, mostly between 17 and 25°C; Thermal exposure is also mapped as low. Low temperatures and fragility are also observed in the southeasternmost region, where large bodies of water are located.
-
-```{r echo=FALSE, out.width = "100%", fig.align='center', cache=TRUE, fig.cap="Mapped vulnerability of Harare to high surface temperatures (a) and its link to surface temperature observed on 30 October 2015 (b). Source: [Taylor](https://www.tandfonline.com/doi/full/10.1080/14498596.2017.1290558)"}
-knitr::include_graphics('week4/Mapped vulnerability of Harare to high surface temperatures (a) and its link to surface temperature observed on 30 October 2015 (b)..jpg')
-```
 
 ## Reflection
 
 Remote sensing data can bring many advantages and innovations to urban heatwave research, as follows:
 
-- It can provide high-resolution surface temperature data, which can accurately measure the heat island effect in different areas of the city, helping the government to more accurately understand the characteristics and changes of urban heat waves.
+-   It can provide high-resolution surface temperature data, which can accurately measure the heat island effect in different areas of the city, helping the government to more accurately understand the characteristics and changes of urban heat waves.
 
-- It can cover a wide urban area without the need for field sampling, which greatly shortens the research time and cost.
+-   It can cover a wide urban area without the need for field sampling, which greatly shortens the research time and cost.
 
-- Real-time, it can provide real-time surface temperature data to help governments and residents take timely measures to cope with heat waves.
+-   Real-time, it can provide real-time surface temperature data to help governments and residents take timely measures to cope with heat waves.
 
-- It can be combined with other data sources, such as meteorological data, population data, etc., to analyze the phenomenon of urban heatwaves from multiple perspectives, bringing new discoveries and research directions.
+-   It can be combined with other data sources, such as meteorological data, population data, etc., to analyze the phenomenon of urban heatwaves from multiple perspectives, bringing new discoveries and research directions.
 
 Remote sensing data can also be used to predict the frequency and intensity of urban heat waves, provide scientific basis for urban planning and construction, and mitigate the impact of urban heat island effect. Remote sensing data has the potential to play an important role and potential in urban heat wave research.
-
