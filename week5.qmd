@@ -4,11 +4,9 @@
 
 ### What is GEE?
 
-GEE is a platform for the scientific analysis and visualisation of geospatial datasets for academic, nonprofit, enterprise, and government users. 
+GEE is a platform for the scientific analysis and visualisation of geospatial datasets for academic, nonprofit, enterprise, and government users.
 
-It hosts satellite imagery and stores it in a public data archive that includes historical Earth images from more than four decades ago. The images ingested daily can then be used for data mining on a global scale, and GEE combines satellite imagery and geospatial dataset catalogues with planetary-scale analysis capabilities. Scientists, researchers, and developers use GEE to detect changes, map trends, and quantify differences in the Earth's surface. 
-
-
+It hosts satellite imagery and stores it in a public data archive that includes historical Earth images from more than four decades ago. The images ingested daily can then be used for data mining on a global scale, and GEE combines satellite imagery and geospatial dataset catalogues with planetary-scale analysis capabilities. Scientists, researchers, and developers use GEE to detect changes, map trends, and quantify differences in the Earth's surface[@introduc].
 
 ```{r echo=FALSE, out.width = "100%", fig.align='center', cache=TRUE, fig.cap="Google earth engine. Source: [Google Earth Engine](https://code.earthengine.google.com/)"}
 knitr::include_graphics('week5/Google earth engine.jpg')
@@ -16,23 +14,23 @@ knitr::include_graphics('week5/Google earth engine.jpg')
 
 ### Features of GEE
 
-GEE stores more than three decades of historical images and scientific datasets, updated and expanded daily. It organises and makes them available to the public, businesses, and management systems. 
+GEE stores more than three decades of historical images and scientific datasets, updated and expanded daily. It organises and makes them available to the public, businesses, and management systems.
 
-GEE provides easy, web-based access to an extensive catalogue of satellite imagery and other geospatial data in an analytics-ready format. Data Catalog, combined with scalable computing power supported by Google data centres and flexible APIs, enables seamless implementation of existing geospatial workflows. This enables advanced, global-scale analysis and visualisation. 
+GEE provides easy, web-based access to an extensive catalogue of satellite imagery and other geospatial data in an analytics-ready format. Data Catalog, combined with scalable computing power supported by Google data centres and flexible APIs, enables seamless implementation of existing geospatial workflows. This enables advanced, global-scale analysis and visualisation.
 
 ### Main functions
 
 It mainly includes the following three types of functions.
 
->*It is an advanced cloud-based geospatial processing platform primarily used for planetary-scale environmental data analysis. It combines satellite imagery and petabytes of geospatial datasets to enable users to visualise, manipulate, edit, and create spatial data simply and quickly. It combines various space manipulation tools to help scientists, researchers, and developers to detect changes, map trends, and quantify differences on the Earth's surface.*
+> *It is an advanced cloud-based geospatial processing platform primarily used for planetary-scale environmental data analysis. It combines satellite imagery and petabytes of geospatial datasets to enable users to visualise, manipulate, edit, and create spatial data simply and quickly. It combines various space manipulation tools to help scientists, researchers, and developers to detect changes, map trends, and quantify differences on the Earth's surface.*
 
->*Integration with Python and JavaScript through its API.  APIs for JavaScript and Python (hosted on GitHub) for making requests to the GEE server. These documents focus on JavaScript; (Javascript API Getting Started Guide). For Python, see the  Python installation guide and Python examples in the Earth Engine GitHub repository. *
+> *Integration with Python and JavaScript through its API. APIs for JavaScript and Python (hosted on GitHub) for making requests to the GEE server. These documents focus on JavaScript; (Javascript API Getting Started Guide). For Python, see the Python installation guide and Python examples in the Earth Engine GitHub repository.*
 
->*Use our web-based code editor for fast, interactive algorithm development and instant access to petabytes of data. Code Editor: An online integrated development environment (IDE) for rapid prototyping and visualising complex spatial analysis using  Javascript APIs. Learn about the code editor documentation.*
+> *Use our web-based code editor for fast, interactive algorithm development and instant access to petabytes of data. Code Editor: An online integrated development environment (IDE) for rapid prototyping and visualising complex spatial analysis using Javascript APIs. Learn about the code editor documentation.*
 
 ### Data category
 
-Google GEE allows geospatial data from the Landsat satellite program to observe dynamic changes in agriculture, natural resources and climate, which passes through the same places on Earth every sixteen days.  Google GEE has become a platform where researchers can easily access Landsat and Sentinel-2 data by partnering with Google Cloud Storage. Google GEE provides a data catalogue and computers for analysis; This allows scientists to collaborate using data, algorithms, and visualisations. 
+GEE allows geospatial data from the Landsat satellite program to observe dynamic changes in agriculture, natural resources and climate, which passes through the same places on Earth every sixteen days[@gorelick2013]. GEE has become a platform where researchers can easily access Landsat and Sentinel-2 data by partnering with Google Cloud Storage. GEE provides a data catalogue and computers for analysis; This allows scientists to collaborate using data, algorithms, and visualisations.
 
 ```{r echo=FALSE, out.width = "100%", fig.align='center', cache=TRUE, fig.cap="Earth Engine Data Catalog. Source: [Google Developer](https://developers.google.com/earth-engine/datasets/catalog)"}
 knitr::include_graphics('week5/Earth Engine Data Catalog.jpg')
@@ -46,7 +44,7 @@ Forests worldwide are in flux, with losses accelerating in some regions and gain
 
 #### Research method
 
-Global tree coverage, losses, and gains for 2012-30 were mapped at a spatial resolution of 2000 m, with losses distributed annually. Global analysis based on Landsat data quantifies total forest loss and gains through spatial clarity, provides annual loss information and quantifies forest loss trends; and through an internally consistent approach. 
+Global tree coverage, losses, and gains for 2012-30 were mapped at a spatial resolution of 2000 m, with losses distributed annually. Global analysis based on Landsat data quantifies total forest loss and gains through spatial clarity, provides annual loss information and quantifies forest loss trends; and through an internally consistent approach[@hansen2013].
 
 ```{r echo=FALSE, out.width = "100%", fig.align='center', cache=TRUE, fig.cap="(A) Tree cover, (B) forest loss, and (C) forest gain. Source: [science](https://www.science.org/doi/10.1126/science.1244693)"}
 knitr::include_graphics('week5/(A) Tree cover, (B) forest loss, and (C) forest gain.jpg')
@@ -54,31 +52,28 @@ knitr::include_graphics('week5/(A) Tree cover, (B) forest loss, and (C) forest g
 
 #### Results
 
-Results of time series analysis of Landsat imagery depicting forest extent and change. 
+Results of time series analysis of Landsat imagery depicting forest extent and change.
 
 ```{r echo=FALSE, out.width = "100%", fig.align='center', cache=TRUE, fig.cap="Global Forest Change. Source: [Earthengine](https://glad.earthengine.app/view/global-forest-change#dl=1;old=off;bl=off;lon=143.87148264923147;lat=44.14304010707153;zoom=2;)"}
 knitr::include_graphics('week5/Global Forest Change.jpg')
 ```
 
-### Google GEE makes maps to predict malaria
+### GEE makes maps to predict malaria
 
-The University of California, San Francisco (UCSF) is working to create an online platform where health workers worldwide can use data from Google GEE to predict where malaria is likely to spread. 
+The University of California, San Francisco (UCSF) is working to create an online platform where health workers worldwide can use data from GEE to predict where malaria is likely to spread.
 
 ```{r echo=FALSE, out.width = "80%", fig.align='center', cache=TRUE, fig.cap="A sample risk map of malaria in Swaziland during the transmission season using data from 2011-2013. Source: [UCSF](https://www.ucsf.edu/news/2014/09/116906/ucsf-google-earth-engine-making-maps-predict-malaria)"}
 knitr::include_graphics('week5/A sample risk map of malaria in Swaziland during the transmission season using data from 2011-2013.jpg')
 ```
 
-Through the malaria prediction platform, local health workers can upload their data on where and when malaria cases occur and combine it with real-time satellite data of weather and other environmental conditions within GEE to determine where new patients are most likely to happen. That way, instead of covering entire countries, they can spray insecticides, distribute mosquito nets or provide antimalarial drugs to those who still need them. 
+Through the malaria prediction platform, local health workers can upload their data on where and when malaria cases occur and combine it with real-time satellite data of weather and other environmental conditions within GEE to determine where new patients are most likely to happen[@ucsfgo2014]. That way, instead of covering entire countries, they can spray insecticides, distribute mosquito nets or provide antimalarial drugs to those who still need them.
 
 ## Reflection
 
-Google Earth Engine is a powerful geospatial processing platform that provides powerful tools and resources to support research and decision-making in urban planning, policy, and governance. 
+Google Earth Engine is a powerful geospatial processing platform that provides powerful tools and resources to support research and decision-making in urban planning, policy, and governance.
 
-Google Earth Engine provides rich geographic information datasets that can be used for spatial analysis in urban planning and policy-making. For example, land cover type data can be used to assess the impact of urban sprawl and land-use change, as well as improvements in urban green cover and air quality. At the same time, Google Earth Engine also provides data from multiple dimensions such as climate, environment and population data, which can help city planners and policymakers better understand the trends and challenges of urban development. 
+Google Earth Engine provides rich geographic information datasets that can be used for spatial analysis in urban planning and policy-making. For example, land cover type data can be used to assess the impact of urban sprawl and land-use change, as well as improvements in urban green cover and air quality. At the same time, Google Earth Engine also provides data from multiple dimensions such as climate, environment and population data, which can help city planners and policymakers better understand the trends and challenges of urban development.
 
-Besides, Google Earth Engine's data open platform has also improved research efficiency in related professional fields. With the analysis tools and data provided by the forum, we can perform data analysis and model building faster, speeding up the research process. For example, researchers can use  Google Earth Engine to analyse factors affecting changes in urban surface temperature and the impact of urbanisation on land use and ecosystems. 
+Besides, Google Earth Engine's data open platform has also improved research efficiency in related professional fields. With the analysis tools and data provided by the forum, we can perform data analysis and model building faster, speeding up the research process. For example, researchers can use Google Earth Engine to analyse factors affecting changes in urban surface temperature and the impact of urbanisation on land use and ecosystems.
 
-In addition, Google Earth Engine provides a dynamic remote sensing information platform that can help decision-makers in city-related professional fields better understand the dynamics of urban development. Through remote sensing technology, the development and changes of cities can be monitored in real-time, including changes in urban expansion, building height, traffic flow, etc. This information can provide strong data support for urban planning and policy. 
-
-
-
+In addition, Google Earth Engine provides a dynamic remote sensing information platform that can help decision-makers in city-related professional fields better understand the dynamics of urban development. Through remote sensing technology, the development and changes of cities can be monitored in real-time, including changes in urban expansion, building height, traffic flow, etc. This information can provide strong data support for urban planning and policy.
