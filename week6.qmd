@@ -84,7 +84,7 @@ knitr::include_graphics('week6/Results of decision tree classification.jpg')
 
 ## Reflection
 
-As an urban and rural planning student, learning remote sensing technology is necessary. In remote sensing technology, Image classification is an important data analysis method, which can automatically classify and identify remote sensing images and realise the extraction of information such as feature type, vegetation coverage, land use, etc., which is of great significance for the research of urban and rural planning and land use.
+In remote sensing technology, Image classification is an important data analysis method, which can automatically classify and identify remote sensing images and realise the extraction of information such as feature type, vegetation coverage, land use, etc., which is of great significance for the research of urban and rural planning and land use.
 
 Regarding application scenarios, image classification can be applied to many fields, such as land use and cover change, ecological environment monitoring, urban planning, agricultural production, etc. For example, in urban planning, we can classify remote sensing images and extract different types of feature information, such as roads, buildings, green spaces, etc., which can help us better understand the spatial structure and functional layout of the city and optimise urban planning and design.
 

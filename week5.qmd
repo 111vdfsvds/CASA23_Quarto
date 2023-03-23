@@ -24,7 +24,7 @@ It mainly includes the following three types of functions.
 
 > *It is an advanced cloud-based geospatial processing platform primarily used for planetary-scale environmental data analysis. It combines satellite imagery and petabytes of geospatial datasets to enable users to visualise, manipulate, edit, and create spatial data simply and quickly. It combines various space manipulation tools to help scientists, researchers, and developers to detect changes, map trends, and quantify differences on the Earth's surface.*
 
-> *Integration with Python and JavaScript through its API. APIs for JavaScript and Python (hosted on GitHub) for making requests to the GEE server. These documents focus on JavaScript; (Javascript API Getting Started Guide). For Python, see the Python installation guide and Python examples in the Earth Engine GitHub repository.*
+> *Integration with Python and JavaScript through its API. APIs for JavaScript and Python (hosted on GitHub) for making requests to the GEE server. These documents focus on JavaScript; (Javascript API Getting Started Guide). *
 
 > *Use our web-based code editor for fast, interactive algorithm development and instant access to petabytes of data. Code Editor: An online integrated development environment (IDE) for rapid prototyping and visualising complex spatial analysis using Javascript APIs. Learn about the code editor documentation.*
 
@@ -40,8 +40,7 @@ knitr::include_graphics('week5/Earth Engine Data Catalog.jpg')
 
 ### High-resolution global map of forest cover change in the 21st century
 
-Forests worldwide are in flux, with losses accelerating in some regions and gains accelerating in others. Global Landsat data were examined with a spatial resolution of 30 meters to characterise forest extent, loss, and profits from 2000 to 2012. Globally, 30,000 square kilometres of forest were lost, and 120,000 square kilometres of new forests were added during the 2-year study period. The tropics have the most significant losses (through regeneration and planting), the gains are the greatest, and the losses outweigh the gains.
-
+Forests worldwide are in flux, with losses accelerating in some regions and gains accelerating in others. Global Landsat data were examined with a spatial resolution of 30 meters to characterise forest extent, loss, and profits from 2000 to 2012. Globally, 30,000 square kilometres of forest were lost, and 120,000 square kilometres of new forests were added during the 2-year study period. 
 #### Research method
 
 Global tree coverage, losses, and gains for 2012-30 were mapped at a spatial resolution of 2000 m, with losses distributed annually. Global analysis based on Landsat data quantifies total forest loss and gains through spatial clarity, provides annual loss information and quantifies forest loss trends; and through an internally consistent approach[@hansen2013].

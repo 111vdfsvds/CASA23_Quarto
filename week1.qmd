@@ -70,7 +70,7 @@ The Normalized Vegetation Index is a widely used index to measure vegetation cov
 
 Principal Component Analysis (PCA): This method converts multiband remote sensing data into several principal components to characterise the land cover type better. This method can classify and monitor land use change, vegetation growth, etc.
 
-### Applications
+## Applications
 
 ### Agriculture and Forestry
 
@@ -80,7 +80,7 @@ It can monitor vegetation cover, land-use change, drought and disasters, etc., t
 
 It can monitor changes in water bodies, including water level, flow rate, water temperature, etc., which helps in water management and protection. Using multi-sensor data such as Landsat 7 ETM+, Landsat 8 OLI and Sentinel-1 SAR images as source data, a regional adaptive random forest algorithm can be constructed to realise automatic surface water mapping[@tang2022].
 
-## Reflaction
+## Reflection
 
 Through the above, we can understand the meaning and categories of remote sensing, the processing methods of remote sensing data, and the current related research fields. I believe that remote sensing data has potential development in the following areas.
 
