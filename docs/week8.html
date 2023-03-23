@@ -8,7 +8,7 @@
 
 <meta name="description" content="This is my learning diary for the CASA0023 course. I will share my notes, exercises, and reflections on a weekly basis.">
 
-<title>Learning Diary CASA0023 - 8&nbsp; week2</title>
+<title>Learning Diary CASA0023 - 8&nbsp; Classification I</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,25 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
 }
 </style>
 
@@ -87,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/111vdfsvds/CASA23_Quarto"><i class="bi bi-github" role="img" aria-label="Source Code">
+    <a class="nav-link" href="https://github.com/111vdfsvds/CASA23_Quarto"><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -106,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">week2</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Classification I</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -131,42 +150,42 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">week1</span></a>
+  <a href="./week1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Remote Sensing</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">week2</span></a>
+  <a href="./week2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Sensors: TerraSAR-X and TanDEM-X</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week3.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">week2</span></a>
+  <a href="./week3.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week4.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">week2</span></a>
+  <a href="./week4.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Policy</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week5.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">week2</span></a>
+  <a href="./week5.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google earth engine(GEE)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week6.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">week2</span></a>
+  <a href="./week6.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week7.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week2</span></a>
+  <a href="./week7.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week8.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">week2</span></a>
+  <a href="./week8.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Classification I</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -184,14 +203,37 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">8.1</span>  Summary</a>
+  <ul class="collapse">
+  <li><a href="#what-is-urban-heat-island" id="toc-what-is-urban-heat-island" class="nav-link" data-scroll-target="#what-is-urban-heat-island"><span class="toc-section-number">8.1.1</span>  What is Urban Heat Island？</a></li>
+  <li><a href="#what-caused-the-urban-heat-island" id="toc-what-caused-the-urban-heat-island" class="nav-link" data-scroll-target="#what-caused-the-urban-heat-island"><span class="toc-section-number">8.1.2</span>  What caused the urban heat island</a></li>
+  <li><a href="#the-impact-of-urban-heat-islands" id="toc-the-impact-of-urban-heat-islands" class="nav-link" data-scroll-target="#the-impact-of-urban-heat-islands"><span class="toc-section-number">8.1.3</span>  The impact of urban heat islands</a></li>
+  <li><a href="#global-policy-documents" id="toc-global-policy-documents" class="nav-link" data-scroll-target="#global-policy-documents"><span class="toc-section-number">8.1.4</span>  Global policy documents</a></li>
+  </ul></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="toc-section-number">8.2</span>  Application</a>
+  <ul class="collapse">
+  <li><a href="#new-york-city-city-heat-island-background" id="toc-new-york-city-city-heat-island-background" class="nav-link" data-scroll-target="#new-york-city-city-heat-island-background"><span class="toc-section-number">8.2.1</span>  New York City City Heat Island background</a></li>
+  <li><a href="#new-york-thermal-vulnerability" id="toc-new-york-thermal-vulnerability" class="nav-link" data-scroll-target="#new-york-thermal-vulnerability"><span class="toc-section-number">8.2.2</span>  New York thermal vulnerability</a></li>
+  <li><a href="#build-real-time-weather-surveillance-models" id="toc-build-real-time-weather-surveillance-models" class="nav-link" data-scroll-target="#build-real-time-weather-surveillance-models"><span class="toc-section-number">8.2.3</span>  Build real-time weather surveillance models</a></li>
+  </ul></li>
+  <li><a href="#detailed-implementation" id="toc-detailed-implementation" class="nav-link" data-scroll-target="#detailed-implementation"><span class="toc-section-number">8.3</span>  Detailed implementation</a>
+  <ul class="collapse">
+  <li><a href="#tollkit" id="toc-tollkit" class="nav-link" data-scroll-target="#tollkit"><span class="toc-section-number">8.3.1</span>  Tollkit</a></li>
+  </ul></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">8.4</span>  Reflection</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">week2</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Classification I</span></h1>
 </div>
 
 
@@ -206,8 +248,140 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="summary" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">8.1</span> Summary</h2>
+<section id="what-is-urban-heat-island" class="level3" data-number="8.1.1">
+<h3 data-number="8.1.1" class="anchored" data-anchor-id="what-is-urban-heat-island"><span class="header-section-number">8.1.1</span> What is Urban Heat Island？</h3>
+<p>The urban heat island effect is when cities experience higher temperatures than the surrounding countryside. This effect can be very noticeable. On average, city daytime temperatures tend to be 1-7°F higher. This difference persists until night when the temperature in the city is still 5°F warmer than in the surrounding area. Scientists refer to regions affected by these higher temperatures as urban heat islands.</p>
+<div class="cell" data-layout-align="center" data-hash="week8_cache/html/unnamed-chunk-1_f292982238e102b84b4b254eea9b77ba">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week8/Urban.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Urban Heat Island. Source: <a href="https://bayareamonitor.org/article/summer-in-the-city-seeking-relief-from-urban-heat-islands/">Bay Area Monitor</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="what-caused-the-urban-heat-island" class="level3" data-number="8.1.2">
+<h3 data-number="8.1.2" class="anchored" data-anchor-id="what-caused-the-urban-heat-island"><span class="header-section-number">8.1.2</span> What caused the urban heat island</h3>
+<p>There are many reasons for UHI. When houses, shops, and industrial buildings are built together, it can create a UHI. Building materials are often very good at thermal insulation or insulation. This insulation makes the area around the building warmer. As cities grow, new developments such as roads and buildings replace natural surfaces such as trees, ponds, and soil. This change in the local environment leads to a corresponding change in the local climate, as these natural surfaces help regulate the temperature.</p>
+<div class="cell" data-layout-align="center" data-hash="week8_cache/html/unnamed-chunk-2_262bf58961ff9b49c24c3ef228de23b5">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week8/The causes of the Urban Heat Island effect.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">The causes of the Urban Heat Island effect. Source: <a href="https://www.researchgate.net/figure/The-causes-of-the-Urban-Heat-Island-effect_fig2_332919262">Research Gate</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="the-impact-of-urban-heat-islands" class="level3" data-number="8.1.3">
+<h3 data-number="8.1.3" class="anchored" data-anchor-id="the-impact-of-urban-heat-islands"><span class="header-section-number">8.1.3</span> The impact of urban heat islands</h3>
+<p>Overheating can have many adverse effects on people and the environment. Air quality suffers because sunlight and radiant heat can quickly turn car exhaust into smoke. According to the Environmental Protection Agency’s website, “Increased daytime temperatures, reduced nighttime cooling, and elevated levels of air pollution associated with urban heat islands can affect human health, resulting in general malaise, difficulty breathing, heat cramps and exhaustion, non-fatal heat stroke, and heat-related mortality.” In short, all this heat is not just uncomfortable; it’s dangerous.</p>
+<div class="cell" data-layout-align="center" data-hash="week8_cache/html/unnamed-chunk-3_d5924734a4c05aeaba3137cd43b9e11d">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week8/Heat islands can be deadly. This graph shows how the number of deaths spiked in Paris during a sweltering heat wave in 2003.JPG" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Heat islands can be deadly. This graph shows how deaths spiked in Paris during a sweltering heat wave in 2003. Source: <a href="https://www.nasa.gov/topics/earth/features/heat-island-sprawl.html">NASA</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="global-policy-documents" class="level3" data-number="8.1.4">
+<h3 data-number="8.1.4" class="anchored" data-anchor-id="global-policy-documents"><span class="header-section-number">8.1.4</span> Global policy documents</h3>
+<section id="beating-the-heat-a-sustainable-cooling-handbook-for-cities" class="level4" data-number="8.1.4.1">
+<h4 data-number="8.1.4.1" class="anchored" data-anchor-id="beating-the-heat-a-sustainable-cooling-handbook-for-cities"><span class="header-section-number">8.1.4.1</span> Beating the Heat: A Sustainable Cooling Handbook for Cities</h4>
+<p>Beating the Heat: A Sustainable Cooling Handbook for Cities was published on March 3, 2021. The new guide provides planners with proven options to help fantastic cities. The guide’s 80 supporting case studies and examples demonstrate the effectiveness of the strategies outlined and can help cities find the approach that best suits their unique environment.</p>
+<div class="cell" data-layout-align="center" data-hash="week8_cache/html/unnamed-chunk-4_96955aaf3e91371f33c0e669356f14c2">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week8/Beating the Heat.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Beating the Heat: A Sustainable Cooling Handbook for Cities. Source: <a href="https://www.unep.org/resources/report/beating-heat-sustainable-cooling-handbook-cities">UNEP</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="metropolitan-city-policytemperature-reduction-activities" class="level4" data-number="8.1.4.2">
+<h4 data-number="8.1.4.2" class="anchored" data-anchor-id="metropolitan-city-policytemperature-reduction-activities"><span class="header-section-number">8.1.4.2</span> Metropolitan (city) policy/temperature reduction activities</h4>
+<p>Metropolitan is implementing an urban forest program, a coordinated approach to increasing urban canopy cover.</p>
+<p>Green spaces and trees offer a range of economic, social and environmental benefits. As the number of days of extreme heat increases year by year and average temperatures continues to rise, methods of cooling cities are becoming increasingly important for public health. The city of Fremantle is divided into several areas in the Urban Forest Plan. These areas are determined based on topography and geology.</p>
+<div class="cell" data-layout-align="center" data-hash="week8_cache/html/unnamed-chunk-5_afcc55e9d827b975afe6f84b1d7f980e">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week8/The hot block of Fremantle.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">The hot block. Source: <a href="https://www.fremantle.wa.gov.au/council/key-council-strategies/urban-forest-plan">Fremantle</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="application" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="application"><span class="header-section-number">8.2</span> Application</h2>
+<section id="new-york-city-city-heat-island-background" class="level3" data-number="8.2.1">
+<h3 data-number="8.2.1" class="anchored" data-anchor-id="new-york-city-city-heat-island-background"><span class="header-section-number">8.2.1</span> New York City City Heat Island background</h3>
+<p>Even without long-term climate change, New Yorkers face weather-related risks today. High temperatures and humidity can lead to severe illness and death every summer. In fact, in a typical year, more Americans die from heat waves than all other natural disasters combined, whether direct mortality from heat stress (hyperthermia, also known as heat stroke) or rising mortality from natural causes due to worsening other medical conditions.</p>
+</section>
+<section id="new-york-thermal-vulnerability" class="level3" data-number="8.2.2">
+<h3 data-number="8.2.2" class="anchored" data-anchor-id="new-york-thermal-vulnerability"><span class="header-section-number">8.2.2</span> New York thermal vulnerability</h3>
+<p>About 80 per cent of heat stroke sufferers in New York City are overcome by overheating conditions in their homes, as indoor temperatures in urban environments can be even higher than outdoor temperatures when air conditioning is unavailable or not in use.</p>
+<div class="cell" data-layout-align="center" data-hash="week8_cache/html/unnamed-chunk-6_1a05197d1fa58e61090d039d67d24dc5">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week8/Heat vulnerability index.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Heat vulnerability index. Source: <a href="https://a816-dohbesp.nyc.gov/IndicatorPublic/beta/data-explorer/climate/?id=2191#display=map">NYC</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>In 2011, a survey by the Department of Health estimated that 25 per cent of New York City adults still use cold tones with little or no use during hot summer weather, and many of them are at increased risk of heat pressure due to age or poor health.</p>
+</section>
+<section id="build-real-time-weather-surveillance-models" class="level3" data-number="8.2.3">
+<h3 data-number="8.2.3" class="anchored" data-anchor-id="build-real-time-weather-surveillance-models"><span class="header-section-number">8.2.3</span> Build real-time weather surveillance models</h3>
+<p>The urban climate has undergone significant changes from its natural state due to changes in the physical characteristics of the landscape and the effects associated with population concentration. As a result, the UHI effect will intensify, with global warming, urban sprawl and increased anthropogenic heat flux leading to more significant thermal gradients between urban centres and surrounding rural areas<span class="citation" data-cites="fujibe2011">(<a href="references.html#ref-fujibe2011" role="doc-biblioref">Fujibe 2011</a>)</span>. As a result, the effects of climate change on UHI have been extensively studied, and cooling energy consumption and heat-related mortality are generally thought to increase given the warmer temperatures within urban agglomerations during extreme heat events<span class="citation" data-cites="luber2008">(<a href="references.html#ref-luber2008" role="doc-biblioref">Luber and McGeehin 2008</a>)</span>. To address these issues, several strategies have been proposed to help mitigate the impact of UHI by lowering the overall temperature of urban environments, including ISG and ISR.</p>
+</section>
+</section>
+<section id="detailed-implementation" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="detailed-implementation"><span class="header-section-number">8.3</span> Detailed implementation</h2>
+<blockquote class="blockquote">
+<p><em><strong>Increase landmark vegetation.</strong>In general, the shade of the leaves provides the main cooling effect achieved by vegetation. Otherwise, solar radiation incident on the surface is prevented from reaching the surface below. Additional cooling can be achieved when the transpiration of the leaves and evaporation of the growth medium dissipate the radiation absorbed by the vegetation. Surface cooling produced by evapotranspiration is usually less than surface cooling made by shadows; However, this process effectively reduces the ambient air temperature on a large scale.</em></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><em><strong>Increase surface reflectance (ISR)/cooling system.</strong>Urban materials generally have darker colours and higher heat capacity than vegetation. Because of this, urban areas tend to absorb and store more incident solar energy than their surroundings. Depending on the exposed surface, the absorbed radiation is either transmitted through conduction through the façade to the conditioned space or released back into the urban environment by radiation and convection. Cooling materials utilise a natural cooling process that removes energy from urban environments.</em></p>
+</blockquote>
+<section id="tollkit" class="level3" data-number="8.3.1">
+<h3 data-number="8.3.1" class="anchored" data-anchor-id="tollkit"><span class="header-section-number">8.3.1</span> Tollkit</h3>
+<ul>
+<li><p><em>Trees and vegetation</em> - Increasing tree and vegetation cover reduce surface and air temperatures by evapotranspiration, providing shade and cooling.</p></li>
+<li><p><em>Green roofs</em> - Planting vegetation layers (plants, shrubs, grasses, and trees) on the top reduces the temperature of the roof surface and surrounding air and improves stormwater management.</p></li>
+<li><p><em>Cool Roof</em> - Installation of a cool roof - A roof made of a material or coating made of a material or coating that significantly reflects the sunlight and heat of the building.</p></li>
+<li><p><em>Cool pavement</em> - Use more astounding paving materials than traditional pavement on sidewalks, parking lots, and streets.</p></li>
+</ul>
+</section>
+</section>
+<section id="reflection" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="reflection"><span class="header-section-number">8.4</span> Reflection</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-fujibe2011" class="csl-entry" role="doc-biblioentry">
+Fujibe, Fumiaki. 2011. <span>“Urban Warming in Japanese Cities and Its Relation to Climate Change Monitoring.”</span> <em>International Journal of Climatology</em> 31 (2): 162–73. <a href="https://doi.org/10.1002/joc.2142">https://doi.org/10.1002/joc.2142</a>.
+</div>
+<div id="ref-luber2008" class="csl-entry" role="doc-biblioentry">
+Luber, George, and Michael McGeehin. 2008. <span>“Climate Change and Extreme Heat Events.”</span> <em>American Journal of Preventive Medicine</em>, Theme Issue: Climate Change and the Health of the Public, 35 (5): 429–35. <a href="https://doi.org/10.1016/j.amepre.2008.08.021">https://doi.org/10.1016/j.amepre.2008.08.021</a>.
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -461,7 +635,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./week7.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week2</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

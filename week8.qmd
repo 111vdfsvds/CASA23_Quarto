@@ -4,15 +4,27 @@
 
 ### What is Urban Heat Island？
 
-The urban heat island effect is when cities experience higher temperatures than the surrounding countryside. This effect can be very noticeable. On average, city daytime temperatures tend to be 1-7°F higher. This difference persists until night when the temperature in the city is still 5°F warmer than in the surrounding area. Scientists refer to regions affected by these higher temperatures as urban heat islands. 
+The urban heat island effect is when cities experience higher temperatures than the surrounding countryside. This effect can be very noticeable. On average, city daytime temperatures tend to be 1-7°F higher. This difference persists until night when the temperature in the city is still 5°F warmer than in the surrounding area. Scientists refer to regions affected by these higher temperatures as urban heat islands.
+
+```{r echo=FALSE, out.width = "100%", fig.align='center', cache=TRUE, fig.cap="Urban Heat Island. Source: [Bay Area Monitor](https://bayareamonitor.org/article/summer-in-the-city-seeking-relief-from-urban-heat-islands/)"}
+knitr::include_graphics('week8/Urban.jpg')
+```
 
 ### What caused the urban heat island
 
 There are many reasons for UHI. When houses, shops, and industrial buildings are built together, it can create a UHI. Building materials are often very good at thermal insulation or insulation. This insulation makes the area around the building warmer. As cities grow, new developments such as roads and buildings replace natural surfaces such as trees, ponds, and soil. This change in the local environment leads to a corresponding change in the local climate, as these natural surfaces help regulate the temperature.
 
+```{r echo=FALSE, out.width = "100%", fig.align='center', cache=TRUE, fig.cap="The causes of the Urban Heat Island effect. Source: [Research Gate](https://www.researchgate.net/figure/The-causes-of-the-Urban-Heat-Island-effect_fig2_332919262)"}
+knitr::include_graphics('week8/The causes of the Urban Heat Island effect.jpg')
+```
+
 ### The impact of urban heat islands
 
-Overheating can have many adverse effects on people and the environment. Air quality suffers because sunlight and radiant heat can quickly turn car exhaust into smoke. According to the Environmental Protection Agency's website, "Increased daytime temperatures, reduced nighttime cooling, and elevated levels of air pollution associated with urban heat islands can affect human health, resulting in general malaise, difficulty breathing, heat cramps and exhaustion, non-fatal heat stroke, and heat-related mortality." In short, all this heat is not just uncomfortable; it’s dangerous. 
+Overheating can have many adverse effects on people and the environment. Air quality suffers because sunlight and radiant heat can quickly turn car exhaust into smoke. According to the Environmental Protection Agency's website, "Increased daytime temperatures, reduced nighttime cooling, and elevated levels of air pollution associated with urban heat islands can affect human health, resulting in general malaise, difficulty breathing, heat cramps and exhaustion, non-fatal heat stroke, and heat-related mortality." In short, all this heat is not just uncomfortable; it's dangerous.
+
+```{r echo=FALSE, out.width = "100%", fig.align='center', cache=TRUE, fig.cap="Heat islands can be deadly. This graph shows how deaths spiked in Paris during a sweltering heat wave in 2003. Source: [NASA](https://www.nasa.gov/topics/earth/features/heat-island-sprawl.html)"}
+knitr::include_graphics('week8/Heat islands can be deadly. This graph shows how the number of deaths spiked in Paris during a sweltering heat wave in 2003.JPG')
+```
 
 ### Global policy documents
 
@@ -20,11 +32,19 @@ Overheating can have many adverse effects on people and the environment. Air qua
 
 Beating the Heat: A Sustainable Cooling Handbook for Cities was published on March 3, 2021. The new guide provides planners with proven options to help fantastic cities. The guide's 80 supporting case studies and examples demonstrate the effectiveness of the strategies outlined and can help cities find the approach that best suits their unique environment.
 
+```{r echo=FALSE, out.width = "100%", fig.align='center', cache=TRUE, fig.cap="Beating the Heat: A Sustainable Cooling Handbook for Cities. Source: [UNEP](https://www.unep.org/resources/report/beating-heat-sustainable-cooling-handbook-cities)"}
+knitr::include_graphics('week8/Beating the Heat.jpg')
+```
+
 #### Metropolitan (city) policy/temperature reduction activities
 
-Metropolitan is implementing an urban forest program, a coordinated approach to increasing urban canopy cover. 
+Metropolitan is implementing an urban forest program, a coordinated approach to increasing urban canopy cover.
 
 Green spaces and trees offer a range of economic, social and environmental benefits. As the number of days of extreme heat increases year by year and average temperatures continues to rise, methods of cooling cities are becoming increasingly important for public health. The city of Fremantle is divided into several areas in the Urban Forest Plan. These areas are determined based on topography and geology.
+
+```{r echo=FALSE, out.width = "100%", fig.align='center', cache=TRUE, fig.cap="The hot block. Source: [Fremantle](https://www.fremantle.wa.gov.au/council/key-council-strategies/urban-forest-plan)"}
+knitr::include_graphics('week8/The hot block of Fremantle.jpg')
+```
 
 ## Application
 
@@ -34,34 +54,32 @@ Even without long-term climate change, New Yorkers face weather-related risks to
 
 ### New York thermal vulnerability
 
-About 80 per cent of heat stroke sufferers in New York City are overcome by overheating conditions in their homes, as indoor temperatures in urban environments can be even higher than outdoor temperatures when air conditioning is unavailable or not in use. 
+About 80 per cent of heat stroke sufferers in New York City are overcome by overheating conditions in their homes, as indoor temperatures in urban environments can be even higher than outdoor temperatures when air conditioning is unavailable or not in use.
 
-In 2011, a survey by the Department of Health estimated that 25 per cent of New York City adults still use cold tones with little or no use during hot summer weather, and many of them are at increased risk of heat pressure due to age or poor health. 
+```{r echo=FALSE, out.width = "100%", fig.align='center', cache=TRUE, fig.cap="Heat vulnerability index. Source: [NYC](https://a816-dohbesp.nyc.gov/IndicatorPublic/beta/data-explorer/climate/?id=2191#display=map)"}
+knitr::include_graphics('week8/Heat vulnerability index.jpg')
+```
+
+In 2011, a survey by the Department of Health estimated that 25 per cent of New York City adults still use cold tones with little or no use during hot summer weather, and many of them are at increased risk of heat pressure due to age or poor health.
 
 ### Build real-time weather surveillance models
 
-The urban climate has undergone significant changes from its natural state due to changes in the physical characteristics of the landscape and the effects associated with population concentration. As a result, the UHI effect will intensify, with global warming, urban sprawl and increased anthropogenic heat flux leading to more significant thermal gradients between urban centres and surrounding rural areas#. As a result, the effects of climate change on UHI have been extensively studied, and cooling energy consumption and heat-related mortality are generally thought to increase ### given the warmer temperatures within urban agglomerations during extreme heat events. To address these issues, several strategies have been proposed to help mitigate the impact of UHI by lowering the overall temperature of urban environments, including ISG and ISR. 
+The urban climate has undergone significant changes from its natural state due to changes in the physical characteristics of the landscape and the effects associated with population concentration. As a result, the UHI effect will intensify, with global warming, urban sprawl and increased anthropogenic heat flux leading to more significant thermal gradients between urban centres and surrounding rural areas[@fujibe2011]. As a result, the effects of climate change on UHI have been extensively studied, and cooling energy consumption and heat-related mortality are generally thought to increase given the warmer temperatures within urban agglomerations during extreme heat events[@luber2008]. To address these issues, several strategies have been proposed to help mitigate the impact of UHI by lowering the overall temperature of urban environments, including ISG and ISR.
 
 ## Detailed implementation
 
->***Increase landmark vegetation.**In general, the shade of the leaves provides the main cooling effect achieved by vegetation. Otherwise, solar radiation incident on the surface is prevented from reaching the surface below. Additional cooling can be achieved when the transpiration of the leaves and evaporation of the growth medium dissipate the radiation absorbed by the vegetation. Surface cooling produced by evapotranspiration is usually less than surface cooling made by shadows; However, this process effectively reduces the ambient air temperature on a large scale.*
+> ***Increase landmark vegetation.**In general, the shade of the leaves provides the main cooling effect achieved by vegetation. Otherwise, solar radiation incident on the surface is prevented from reaching the surface below. Additional cooling can be achieved when the transpiration of the leaves and evaporation of the growth medium dissipate the radiation absorbed by the vegetation. Surface cooling produced by evapotranspiration is usually less than surface cooling made by shadows; However, this process effectively reduces the ambient air temperature on a large scale.*
 
->***Increase surface reflectance (ISR)/cooling system.**Urban materials generally have darker colours and higher heat capacity than vegetation. Because of this, urban areas tend to absorb and store more incident solar energy than their surroundings. Depending on the exposed surface, the absorbed radiation is either transmitted through conduction through the façade to the conditioned space or released back into the urban environment by radiation and convection. Cooling materials utilise a natural cooling process that removes energy from urban environments.*
+> ***Increase surface reflectance (ISR)/cooling system.**Urban materials generally have darker colours and higher heat capacity than vegetation. Because of this, urban areas tend to absorb and store more incident solar energy than their surroundings. Depending on the exposed surface, the absorbed radiation is either transmitted through conduction through the façade to the conditioned space or released back into the urban environment by radiation and convection. Cooling materials utilise a natural cooling process that removes energy from urban environments.*
 
 ### Tollkit
 
-- *Trees and vegetation* - Increasing tree and vegetation cover reduce surface and air temperatures by evapotranspiration, providing shade and cooling.
+-   *Trees and vegetation* - Increasing tree and vegetation cover reduce surface and air temperatures by evapotranspiration, providing shade and cooling.
 
-- *Green roofs* - Planting vegetation layers (plants, shrubs, grasses, and trees) on the top reduces the temperature of the roof surface and surrounding air and improves stormwater management. 
+-   *Green roofs* - Planting vegetation layers (plants, shrubs, grasses, and trees) on the top reduces the temperature of the roof surface and surrounding air and improves stormwater management.
 
-- *Cool Roof* - Installation of a cool roof -  A roof made of a material or coating made of a material or coating that significantly reflects the sunlight and heat of the building. 
+-   *Cool Roof* - Installation of a cool roof - A roof made of a material or coating made of a material or coating that significantly reflects the sunlight and heat of the building.
 
-- *Cool pavement* - Use more astounding paving materials than traditional pavement on sidewalks, parking lots, and streets. 
+-   *Cool pavement* - Use more astounding paving materials than traditional pavement on sidewalks, parking lots, and streets.
 
 ## Reflection
-
-
-
-
-
-
