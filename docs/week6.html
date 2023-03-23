@@ -8,7 +8,7 @@
 
 <meta name="description" content="This is my learning diary for the CASA0023 course. I will share my notes, exercises, and reflections on a weekly basis.">
 
-<title>Learning Diary CASA0023 - 6&nbsp; week2</title>
+<title>Learning Diary CASA0023 - 6&nbsp; Classification I</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,25 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
 }
 </style>
 
@@ -87,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/111vdfsvds/CASA23_Quarto"><i class="bi bi-github" role="img" aria-label="Source Code">
+    <a class="nav-link" href="https://github.com/111vdfsvds/CASA23_Quarto"><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -106,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">week2</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -131,37 +150,37 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">week1</span></a>
+  <a href="./week1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Remote Sensing</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">week2</span></a>
+  <a href="./week2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Sensors: TerraSAR-X and TanDEM-X</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week3.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">week2</span></a>
+  <a href="./week3.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week4.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">week2</span></a>
+  <a href="./week4.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Policy</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week5.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">week2</span></a>
+  <a href="./week5.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google earth engine(GEE)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week6.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">week2</span></a>
+  <a href="./week6.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week7.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week2</span></a>
+  <a href="./week7.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification Ⅱ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -184,14 +203,28 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">6.1</span>  Summary</a>
+  <ul class="collapse">
+  <li><a href="#classification-and-regression-trees-cart" id="toc-classification-and-regression-trees-cart" class="nav-link" data-scroll-target="#classification-and-regression-trees-cart"><span class="toc-section-number">6.1.1</span>  Classification and regression trees (CART)</a></li>
+  <li><a href="#overfitting" id="toc-overfitting" class="nav-link" data-scroll-target="#overfitting"><span class="toc-section-number">6.1.2</span>  Overfitting</a></li>
+  <li><a href="#image-classification" id="toc-image-classification" class="nav-link" data-scroll-target="#image-classification"><span class="toc-section-number">6.1.3</span>  Image classification</a></li>
+  <li><a href="#practical-results" id="toc-practical-results" class="nav-link" data-scroll-target="#practical-results"><span class="toc-section-number">6.1.4</span>  Practical results</a></li>
+  </ul></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="toc-section-number">6.2</span>  Application</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">6.3</span>  Reflection</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">week2</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></h1>
 </div>
 
 
@@ -206,8 +239,147 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="summary" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">6.1</span> Summary</h2>
+<section id="classification-and-regression-trees-cart" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="classification-and-regression-trees-cart"><span class="header-section-number">6.1.1</span> Classification and regression trees (CART)</h3>
+<section id="what-is-cart" class="level4" data-number="6.1.1.1">
+<h4 data-number="6.1.1.1" class="anchored" data-anchor-id="what-is-cart"><span class="header-section-number">6.1.1.1</span> What is CART？</h4>
+<p>When the relationship between a set of predictors and response variables is linear, methods such as multiple linear regression can produce accurate predictive models. However, nonlinear methods can perform better when the relationship between a set of predictors and response variables is highly nonlinear and complex. A classification and regression tree is a nonlinear method that uses a set of predictors to build a decision tree that predicts the values of the response variable.</p>
+<div class="cell" data-layout-align="center" data-hash="week6_cache/html/unnamed-chunk-1_5941d7f8c5fb0e2b0a168887784e1834">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week6/Decision trees can be applied to many predictor variables.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Decision trees can be applied to many predictor variables. Source: <a href="https://code.earthengine.google.com/">Natrue</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="overfitting" class="level3" data-number="6.1.2">
+<h3 data-number="6.1.2" class="anchored" data-anchor-id="overfitting"><span class="header-section-number">6.1.2</span> Overfitting</h3>
+<section id="what-is-overfitting" class="level4" data-number="6.1.2.1">
+<h4 data-number="6.1.2.1" class="anchored" data-anchor-id="what-is-overfitting"><span class="header-section-number">6.1.2.1</span> What is overfitting</h4>
+<p>In mathematical modelling, overfitting is when the resulting analysis is too close or perfectly corresponding to a specific set of data sets to fit other data or reliably predict future observations<span class="citation" data-cites="overfitt2017">(<a href="references.html#ref-overfitt2017" role="doc-biblioref"><span>“Overfitting | Definition of Overfitting in English by Oxford Dictionaries”</span> 2017</a>)</span>.</p>
+<p>An overfitting model is a mathematical model that contains more parameters than the data can prove. The essence of overfitting is to extract some residual changes (i.e.&nbsp;noise) unknowingly. As an extreme example, if the number of parameters is equal to or greater than the number of observations, then the model can perfectly predict the training data simply by memorising the data completely.</p>
+<div class="cell" data-layout-align="center" data-hash="week6_cache/html/unnamed-chunk-2_f3d553a53e2b199f14dbebac543c526a">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week6/Overfitting Electoral Precedence.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Overfitting Electoral Precedence. Source: <a href="https://xkcd.com/1122/">XKCD</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="how-to-avoid-overfitting" class="level4" data-number="6.1.2.2">
+<h4 data-number="6.1.2.2" class="anchored" data-anchor-id="how-to-avoid-overfitting"><span class="header-section-number">6.1.2.2</span> How to avoid overfitting?</h4>
+<p>While using linear models helps us avoid overfitting, many real-world problems are nonlinear. In addition to understanding how to detect overfitting, it is essential to avoid overfitting altogether. Here are some techniques you can use to prevent overfitting:</p>
+<ul>
+<li><p>Early Stop: Pauses training before the model starts learning noise in the model.</p></li>
+<li><p>Train with more data: Expand the training set to include more data, providing opportunities to resolve the dominant relationship between input and output variables to improve the model’s accuracy.</p></li>
+<li><p>Data augmentation: While it’s best to inject clean, relevant data into the training data, noisy data is sometimes added to make the model more stable.</p></li>
+<li><p>Feature selection: When building a model, choose to identify the essential features in the training data and eliminate irrelevant or redundant features.</p></li>
+<li><p>Regularisation: If overfitting occurs when the model is too complex, reducing the number of features makes sense.</p></li>
+</ul>
+</section>
+</section>
+<section id="image-classification" class="level3" data-number="6.1.3">
+<h3 data-number="6.1.3" class="anchored" data-anchor-id="image-classification"><span class="header-section-number">6.1.3</span> Image classification</h3>
+<section id="what-is-image-classification" class="level4" data-number="6.1.3.1">
+<h4 data-number="6.1.3.1" class="anchored" data-anchor-id="what-is-image-classification"><span class="header-section-number">6.1.3.1</span> What is image classification?</h4>
+<p>Image classification is an important computer vision task integral to modern technology. It involves assigning labels or tags to the entire image, taken from a pre-existing database acquired by training the model. On the surface, the process is simple, but in reality, it involves analysing the individual pixels of an image before determining the appropriate label for the overall picture. As a final result, we can acquire a series of data for each corresponding image. We can continue to categorise and analyse the information on the label.</p>
+<div class="cell" data-layout-align="center" data-hash="week6_cache/html/unnamed-chunk-3_ff94b5f581456cf6212a1ab1b33a2bad">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week6/The process of Remote sensing image classification method based on SDAE.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">The process of Remote sensing image classification method based on SDAE. Source: <a href="https://www.mdpi.com/2072-4292/10/1/16">MDPI</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="category" class="level4" data-number="6.1.3.2">
+<h4 data-number="6.1.3.2" class="anchored" data-anchor-id="category"><span class="header-section-number">6.1.3.2</span> Category</h4>
+<p>Image classification techniques are mainly divided into two categories: supervised and unsupervised image classification techniques.</p>
+<blockquote class="blockquote">
+<p><em><strong>Unsupervised classification.</strong>The unsupervised classification technique is fully automated and does not utilise training data. This means that machine learning algorithms are used to analyse and cluster unlabeled datasets by discovering hidden patterns or groups of data without human intervention. With the help of suitable algorithms, specific features of the image are systematically identified at the image processing stage.</em></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><em><strong>Supervise classification</strong>The supervised image classification method uses the previous classification’s reference sample (ground fact) to train the classifier and subsequently classify the new unknown data. Therefore, managed classification techniques visually select training data samples in images and assign them to pre-selected categories, including vegetation, roads, water resources, and buildings. This is done to create statistical measures for the overall picture.</em></p>
+</blockquote>
+<div class="cell" data-layout-align="center" data-hash="week6_cache/html/unnamed-chunk-4_ec5f216a08519c12500f536cb6560e75">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week6/supervised and unsupervised classification.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">supervised and unsupervised classification. Source: <a href="https://www.superannotate.com/blog/image-classification-basics">Superannotate</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="practical-results" class="level3" data-number="6.1.4">
+<h3 data-number="6.1.4" class="anchored" data-anchor-id="practical-results"><span class="header-section-number">6.1.4</span> Practical results</h3>
+<p>Use the methodology to generate a land use classification map for New York City.</p>
+<div class="cell" data-layout-align="center" data-hash="week6_cache/html/unnamed-chunk-5_6f79b40e61af3ea95804c9f6c6328d6b">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week6/New York City Site Type Classification.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">New York City Site Type Classification. Source: <a href="https://code.earthengine.google.com/a1857fe9334d6e6a33e5a303db12b290">Zhiwei</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="application" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="application"><span class="header-section-number">6.2</span> Application</h2>
+<p>An automated method for classifying detailed urban land-use categories using remotely sensed data. Seven land-use parcel attributes derived from relevant remote sensing data were included, and four land-use types were classified: office, industrial, municipal, and transport. The classification method adopted is based on the decision tree classification algorithm. The advantage of the decision tree algorithm is its ability to handle numeric and categorical inputs<span class="citation" data-cites="hu2013">(<a href="references.html#ref-hu2013" role="doc-biblioref">Hu and Wang 2013</a>)</span>. It is not limited to statistical analysis assumptions for the input data, as some parcel attributes are not normally distributed. It was found that the best classification results were achieved using the decision tree classifier, achieving the highest overall accuracy.</p>
+<div class="cell" data-layout-align="center" data-hash="week6_cache/html/unnamed-chunk-6_24ec4813c8dd1b3edfdbe8bb54b69c14">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week6/Study area in Austin, Texas, showing land use.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Study area in Austin, Texas, showing land use. Source: <a href="https://www.tandfonline.com/doi/full/10.1080/01431161.2012.714510?casa_token=NG9VC2T2v5cAAAAA%3Axwkub1d4ZObST47dawFuY0pp6T-oOkRO8o5skOPPjNhjNQRxHx9kj0EQP_tLngx_7u7lmGKoYLjNBQ">Tandfonline</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The confusion matrix of the decision tree classification algorithm shows that it is feasible to distinguish 61 land use categories using remote sensing image data. However, there still needs to be some clarification between the office, municipal, and industrial land categories. Citizen land use is the most difficult to separate from other land use categories. In addition, the accuracy of extracting attribute values can lead to some errors, such as a cumbersome way to remove parking lots<span class="citation" data-cites="hu2013">(<a href="references.html#ref-hu2013" role="doc-biblioref">Hu and Wang 2013</a>)</span>.</p>
+<div class="cell" data-layout-align="center" data-hash="week6_cache/html/unnamed-chunk-7_1852e148e26794a818574fd464054419">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week6/Results of decision tree classification.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Results of decision tree classification. Source: <a href="https://www.tandfonline.com/doi/full/10.1080/01431161.2012.714510?casa_token=NG9VC2T2v5cAAAAA%3Axwkub1d4ZObST47dawFuY0pp6T-oOkRO8o5skOPPjNhjNQRxHx9kj0EQP_tLngx_7u7lmGKoYLjNBQ">Tandfonline</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="reflection" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">6.3</span> Reflection</h2>
+<p>As an urban and rural planning student, learning remote sensing technology is necessary. In remote sensing technology, Image classification is an important data analysis method, which can automatically classify and identify remote sensing images and realise the extraction of information such as feature type, vegetation coverage, land use, etc., which is of great significance for the research of urban and rural planning and land use.</p>
+<p>Regarding application scenarios, image classification can be applied to many fields, such as land use and cover change, ecological environment monitoring, urban planning, agricultural production, etc. For example, in urban planning, we can classify remote sensing images and extract different types of feature information, such as roads, buildings, green spaces, etc., which can help us better understand the spatial structure and functional layout of the city and optimise urban planning and design.</p>
+<p>Regarding the current confusion, it is necessary to understand the advantages and disadvantages of different classification methods, the applicable scenarios, and the problems that may arise in practical applications. In addition, improving the classification accuracy and efficiency when processing large-scale data is also a problem that needs further exploration and solving.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-hu2013" class="csl-entry" role="doc-biblioentry">
+Hu, Shougeng, and Le Wang. 2013. <span>“Automated Urban Land-Use Classification with Remote Sensing.”</span> <em>International Journal of Remote Sensing</em> 34 (3): 790–803. <a href="https://doi.org/10.1080/01431161.2012.714510">https://doi.org/10.1080/01431161.2012.714510</a>.
+</div>
+<div id="ref-overfitt2017" class="csl-entry" role="doc-biblioentry">
+<span>“Overfitting | Definition of Overfitting in English by Oxford Dictionaries.”</span> 2017. <a href="https://web.archive.org/web/20171107014257/https://en.oxforddictionaries.com/definition/overfitting">https://web.archive.org/web/20171107014257/https://en.oxforddictionaries.com/definition/overfitting</a>.
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -461,12 +633,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./week5.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">week2</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google earth engine(GEE)</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./week7.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week2</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification Ⅱ</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -1,4 +1,97 @@
----
-title: "week2"
-editor: visual
----
+# Classification II
+
+## Summary
+
+### Landcover classification
+
+#### Object based image analysis (OBIA)
+
+Object-based image analysis (OBIA) involves first grouping pixels into objects based on spectral similarity or external variables such as ownership, soil, or geological units. Many variables can be identified and categorised into spectra, shapes, and neighbourhoods. Examples of spectral variables include mean and standard deviation for specific spectral bands; Shape variables include size, perimeter, and compactness; For example, a neighbourhood variable represents the mean difference between an object and a dark-coloured object. Each object is also part of a "super object", obtained by combining several adjacent objects into a larger one, each of which can be subdivided into smaller objects: "sub-objects".
+
+```{r echo=FALSE, out.width = "70%", fig.align='center', cache=TRUE, fig.cap="Use Euclidean distance in SLIC. Source: [Nowosad 2021](https://jakubnowosad.com/ogh2021/#10)"}
+knitr::include_graphics('week7/Supercells.gif')
+```
+
+```{r echo=FALSE, out.width = "80%", fig.align='center', cache=TRUE, fig.cap="Supercells. Source: [Darshite Jain](https://darshita1405.medium.com/superpixels-and-slic-6b2d8a6e4f08)"}
+knitr::include_graphics('week7/bear.jpg')
+```
+
+#### Sub-pixel analysis
+
+The sub-pixel analysis is a digital image processing technique that achieves subpixel resolution in images. This means that subpixel resolution can be obtained when the information of a picture exceeds its nominal pixel resolution. For example, in an idea, a position is represented as an integer value (x,y) coordinates and a place where a fractional pixel location might be given.
+
+```{r echo=FALSE, out.width = "80%", fig.align='center', cache=TRUE, fig.cap="Comparison of true colour high spatial resolution data (a) and Landsat surface reflectance (b) highlighting the spatial detail captured by high-resolution imagery (c) and the same areas as observed by Landsat (d) for the subset East Beechboro used within this study. Source: [Tandfonline](https://www.tandfonline.com/doi/pdf/10.1080/01431161.2017.1346403?needAccess=true&)"}
+knitr::include_graphics('week7/Comparison.jpg')
+```
+
+### Accuracy
+
+#### Accuracy in remote sensing data
+
+The accuracy assessment or verification of remote sensing data is an essential step in the remote sensing data processing. It determines the informational value of the resulting data to the user. Geographic data can only be effectively utilised when the data quality is known12. Accuracy assessment and validation are critical for remote sensing-based projects. Using unknown or less accurate data for decision-making or scientific analysis will result in low information reliability, error propagation effects, and limited value.
+
+```{r echo=FALSE, out.width = "80%", fig.align='center', cache=TRUE, fig.cap="Accuracy Dimensions in Remote Sensing. Source: [Barsi et al. 2018](https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/XLII-3/61/2018/isprs-archives-XLII-3-61-2018.pdf)"}
+knitr::include_graphics('week7/Table.jpg')
+```
+
+#### Balance the accuracy of the data
+
+It cannot be achieved a high producer accuracy (recall) and a high user's accuracy (precision) simultaneously.
+
+```{r echo=FALSE, out.width = "80%", fig.align='center', cache=TRUE, fig.cap=" . Source: [MLU](https://mlu-explain.github.io/precision-recall/)"}
+knitr::include_graphics('week7/table1.jpg')
+```
+
+### Verification method
+
+#### Divide the dataset
+
+Typically, the dataset is divided into training and testing sets. The training set is used to train the model, while the test set is used to evaluate the model's performance. This aims to prevent overfitting, where the model performs well on the training data but not on the new data. By considering the model on an independent test set, we can better understand the model's ability to generalise to unknown data.
+
+```{r echo=FALSE, out.width = "100%", fig.align='center', cache=TRUE, fig.cap="Dividing the data set. Source: [Towards Data](https://towardsdatascience.com/understanding-train-test-split-scikit-learn-python-ea676d5e3d1)"}
+knitr::include_graphics('week7/Dividing the data set.jpg')
+```
+
+#### Cross validation
+
+Cross Validation is a statistical method used to assess the generalisation ability of a model. It tests the model's performance on the other subsets by dividing the dataset into subsets and then training the model on one of the subsets. This process is repeated multiple times, training and testing with a different subgroup each time. Finally, the average of all test results is used to evaluate the model's performance. Cross-validation can help us better understand the model's generalisation ability for anonymous data and help select appropriate model parameters.
+
+```{r echo=FALSE, out.width = "100%", fig.align='center', cache=TRUE, fig.cap="cross validation. Source: [Towards Data](https://en.wikipedia.org/wiki/Cross-validation_%28statistics%29)"}
+knitr::include_graphics('week7/cross validation.jpg')
+```
+
+#### Spatial Cross Validation
+
+Spatial Cross Validation is a method for evaluating the performance of spatial prediction models. It is similar to normal cross-validation but considers spatial relationships when dividing the dataset. The dataset is divided into subsets in spatial cross-validation, each containing adjacent observations. Then, train the model on one subset and test the model's performance on the other subsets. This process is repeated multiple times, training and testing with a different subgroup each time. Spatial cross-validation can help us better understand the model's generalisation ability to unknown data and help select appropriate model parameters.
+
+```{r echo=FALSE, out.width = "100%", fig.align='center', cache=TRUE, fig.cap="Spatial visualization of selected test and training observations for cross-validation of one repetition. Random (upper row) and spatial partitioning (lower row). Source: [Geocompr](https://geocompr.robinlovelace.net/spatial-cv.html)"}
+knitr::include_graphics('week7/Spatial visualization of selected test and training observations for cross-validation of one repetition. Random (upper row) and spatial partitioning (lower row).jpg')
+```
+
+## Application
+
+### Map land cover and land use from object-based classification
+
+Whether object-based image analysis (OBIA) can improve land cover and land-use classification in complex agricultural landscapes located on the borders of Poland and Ukraine were tested. The results of OBIA-based land cover and land use classification based on OBIA and per pixel were quantitatively compared. The results show that when using the OBIA-based method, the OBIA-based process is significantly improved when the OBIA-based method is applied using both the spectra and spatial/geometric features of the image object, but not when the spectral or spatial/geometric features alone are used[@goodin2015]. In human-altered landscapes, the geometry and arrangement of surface spatial structures can convey land use information, and OBIA-based techniques can provide a powerful tool for improving classification.
+
+```{r echo=FALSE, out.width = "100%", fig.align='center', cache=TRUE, fig.cap="Results from the per-pixel (a) and OBIA-combined (b) classifications. Source: [Tandfonline](https://www.tandfonline.com/doi/full/10.1080/01431161.2015.1088674?needAccess=true)"}
+knitr::include_graphics('week7/Results from the per-pixel (a) and OBIA-combined (b) classifications.jpg')
+```
+
+The object-based approach involves two distinct steps: (1) segmentation (including object parameter calculation); (2) Classification. In object-based analysis, segmentation is a critical step.
+
+### Fine-grained zoning mapping of land cover within river
+
+Accurate mapping of land cover diversity in riparian areas at the regional scale is a significant challenge to better understanding the impact of riparian landscapes and associated natural and anthropogenic pressures on river ecological conditions. Since land cover (RALC) structures in riparian areas are often unavailable using medium-scale satellite imagery, finer spatial resolution imagery and specific mapping techniques are required[@tormos2012]. Develop a classification program based on a thorough multi-scale object-based image analysis (OBIA) scheme to generate detailed and reliable RARC maps in different geographical environments (geomorphology, climate and geology).
+
+```{r echo=FALSE, out.width = "80%", fig.align='center', cache=TRUE, fig.cap="Flowchart of the riparian area land-cover classification procedure. Source: [Tandfonline](https://www.tandfonline.com/doi/full/10.1080/01431161.2011.637093)"}
+knitr::include_graphics('week7/Flowchart of the riparian area land-cover classification procedure.jpg')
+```
+
+The OBIA scheme uses fuzzy expert knowledge classification rules to combine information from high spatial resolution multispectral images (satellite or airborne) with available space-thematic data. It was tested on the Hérault basin (southern France), which presents a contrasting landscape with a total length of 1,150 km of streams, using SPOT (Earth Observation System) 5 XS imagery (10 m pixels), aerial photography (0.5 m pixels) and several national space thematic data[@tormos2012].
+
+```{r echo=FALSE, out.width = "80%", fig.align='center', cache=TRUE, fig.cap="(a) River corridor land cover (RALC) map of the Hérault River basin according to the level 3 hierarchical classification nomenclature. (b) RALC map of 80 km of the Hérault River mainstream according to the pressure typology derived from high spatial resolution images (HSRIs) (left) and CORINE Land Cover (CLC) (right). Source: [Tandfonline](https://www.tandfonline.com/doi/full/10.1080/01431161.2011.637093)"}
+knitr::include_graphics('week7/river.jpg')
+```
+
+## Reflection

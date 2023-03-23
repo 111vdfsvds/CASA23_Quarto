@@ -1,4 +1,91 @@
----
-title: "week2"
-editor: visual
----
+# Classification I
+
+## Summary
+
+### Classification and regression trees (CART)
+
+#### What is CART？
+
+When the relationship between a set of predictors and response variables is linear, methods such as multiple linear regression can produce accurate predictive models. However, nonlinear methods can perform better when the relationship between a set of predictors and response variables is highly nonlinear and complex. A classification and regression tree is a nonlinear method that uses a set of predictors to build a decision tree that predicts the values of the response variable.
+
+```{r echo=FALSE, out.width = "100%", fig.align='center', cache=TRUE, fig.cap="Decision trees can be applied to many predictor variables. Source: [Natrue](https://code.earthengine.google.com/)"}
+knitr::include_graphics('week6/Decision trees can be applied to many predictor variables.jpg')
+```
+
+### Overfitting
+
+#### What is overfitting
+
+In mathematical modelling, overfitting is when the resulting analysis is too close or perfectly corresponding to a specific set of data sets to fit other data or reliably predict future observations[@overfitt2017].
+
+An overfitting model is a mathematical model that contains more parameters than the data can prove. The essence of overfitting is to extract some residual changes (i.e. noise) unknowingly. As an extreme example, if the number of parameters is equal to or greater than the number of observations, then the model can perfectly predict the training data simply by memorising the data completely.
+
+```{r echo=FALSE, out.width = "80%", fig.align='center', cache=TRUE, fig.cap="Overfitting Electoral Precedence. Source: [XKCD](https://xkcd.com/1122/)"}
+knitr::include_graphics('week6/Overfitting Electoral Precedence.jpg')
+```
+
+#### How to avoid overfitting?
+
+While using linear models helps us avoid overfitting, many real-world problems are nonlinear. In addition to understanding how to detect overfitting, it is essential to avoid overfitting altogether. Here are some techniques you can use to prevent overfitting:
+
+-   Early Stop: Pauses training before the model starts learning noise in the model.
+
+-   Train with more data: Expand the training set to include more data, providing opportunities to resolve the dominant relationship between input and output variables to improve the model's accuracy.
+
+-   Data augmentation: While it's best to inject clean, relevant data into the training data, noisy data is sometimes added to make the model more stable.
+
+-   Feature selection: When building a model, choose to identify the essential features in the training data and eliminate irrelevant or redundant features.
+
+-   Regularisation: If overfitting occurs when the model is too complex, reducing the number of features makes sense.
+
+### Image classification
+
+#### What is image classification?
+
+Image classification is an important computer vision task integral to modern technology. It involves assigning labels or tags to the entire image, taken from a pre-existing database acquired by training the model. On the surface, the process is simple, but in reality, it involves analysing the individual pixels of an image before determining the appropriate label for the overall picture. As a final result, we can acquire a series of data for each corresponding image. We can continue to categorise and analyse the information on the label.
+
+```{r echo=FALSE, out.width = "80%", fig.align='center', cache=TRUE, fig.cap="The process of Remote sensing image classification method based on SDAE. Source: [MDPI](https://www.mdpi.com/2072-4292/10/1/16)"}
+knitr::include_graphics('week6/The process of Remote sensing image classification method based on SDAE.jpg')
+```
+
+#### Category
+
+Image classification techniques are mainly divided into two categories: supervised and unsupervised image classification techniques.
+
+> ***Unsupervised classification.**The unsupervised classification technique is fully automated and does not utilise training data. This means that machine learning algorithms are used to analyse and cluster unlabeled datasets by discovering hidden patterns or groups of data without human intervention. With the help of suitable algorithms, specific features of the image are systematically identified at the image processing stage.*
+
+> ***Supervise classification**The supervised image classification method uses the previous classification's reference sample (ground fact) to train the classifier and subsequently classify the new unknown data. Therefore, managed classification techniques visually select training data samples in images and assign them to pre-selected categories, including vegetation, roads, water resources, and buildings. This is done to create statistical measures for the overall picture.*
+
+```{r echo=FALSE, out.width = "100%", fig.align='center', cache=TRUE, fig.cap="supervised and unsupervised classification. Source: [Superannotate](https://www.superannotate.com/blog/image-classification-basics)"}
+knitr::include_graphics('week6/supervised and unsupervised classification.jpg')
+```
+
+### Practical results
+
+Use the methodology to generate a land use classification map for New York City.
+
+```{r echo=FALSE, out.width = "80%", fig.align='center', cache=TRUE, fig.cap="New York City Site Type Classification. Source: [Zhiwei](https://code.earthengine.google.com/a1857fe9334d6e6a33e5a303db12b290)"}
+knitr::include_graphics('week6/New York City Site Type Classification.jpg')
+```
+
+## Application
+
+An automated method for classifying detailed urban land-use categories using remotely sensed data. Seven land-use parcel attributes derived from relevant remote sensing data were included, and four land-use types were classified: office, industrial, municipal, and transport. The classification method adopted is based on the decision tree classification algorithm. The advantage of the decision tree algorithm is its ability to handle numeric and categorical inputs[@hu2013]. It is not limited to statistical analysis assumptions for the input data, as some parcel attributes are not normally distributed. It was found that the best classification results were achieved using the decision tree classifier, achieving the highest overall accuracy.
+
+```{r echo=FALSE, out.width = "80%", fig.align='center', cache=TRUE, fig.cap="Study area in Austin, Texas, showing land use. Source: [Tandfonline](https://www.tandfonline.com/doi/full/10.1080/01431161.2012.714510?casa_token=NG9VC2T2v5cAAAAA%3Axwkub1d4ZObST47dawFuY0pp6T-oOkRO8o5skOPPjNhjNQRxHx9kj0EQP_tLngx_7u7lmGKoYLjNBQ)"}
+knitr::include_graphics('week6/Study area in Austin, Texas, showing land use.jpg')
+```
+
+The confusion matrix of the decision tree classification algorithm shows that it is feasible to distinguish 61 land use categories using remote sensing image data. However, there still needs to be some clarification between the office, municipal, and industrial land categories. Citizen land use is the most difficult to separate from other land use categories. In addition, the accuracy of extracting attribute values can lead to some errors, such as a cumbersome way to remove parking lots[@hu2013].
+
+```{r echo=FALSE, out.width = "80%", fig.align='center', cache=TRUE, fig.cap="Results of decision tree classification. Source: [Tandfonline](https://www.tandfonline.com/doi/full/10.1080/01431161.2012.714510?casa_token=NG9VC2T2v5cAAAAA%3Axwkub1d4ZObST47dawFuY0pp6T-oOkRO8o5skOPPjNhjNQRxHx9kj0EQP_tLngx_7u7lmGKoYLjNBQ)"}
+knitr::include_graphics('week6/Results of decision tree classification.jpg')
+```
+
+## Reflection
+
+As an urban and rural planning student, learning remote sensing technology is necessary. In remote sensing technology, Image classification is an important data analysis method, which can automatically classify and identify remote sensing images and realise the extraction of information such as feature type, vegetation coverage, land use, etc., which is of great significance for the research of urban and rural planning and land use.
+
+Regarding application scenarios, image classification can be applied to many fields, such as land use and cover change, ecological environment monitoring, urban planning, agricultural production, etc. For example, in urban planning, we can classify remote sensing images and extract different types of feature information, such as roads, buildings, green spaces, etc., which can help us better understand the spatial structure and functional layout of the city and optimise urban planning and design.
+
+Regarding the current confusion, it is necessary to understand the advantages and disadvantages of different classification methods, the applicable scenarios, and the problems that may arise in practical applications. In addition, improving the classification accuracy and efficiency when processing large-scale data is also a problem that needs further exploration and solving.

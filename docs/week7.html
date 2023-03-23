@@ -8,7 +8,7 @@
 
 <meta name="description" content="This is my learning diary for the CASA0023 course. I will share my notes, exercises, and reflections on a weekly basis.">
 
-<title>Learning Diary CASA0023 - 7&nbsp; week2</title>
+<title>Learning Diary CASA0023 - 7&nbsp; Classification II</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,25 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
 }
 </style>
 
@@ -87,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/111vdfsvds/CASA23_Quarto"><i class="bi bi-github" role="img" aria-label="Source Code">
+    <a class="nav-link" href="https://github.com/111vdfsvds/CASA23_Quarto"><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -106,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week2</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -131,37 +150,37 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">week1</span></a>
+  <a href="./week1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Remote Sensing</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">week2</span></a>
+  <a href="./week2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Sensors: TerraSAR-X and TanDEM-X</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week3.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">week2</span></a>
+  <a href="./week3.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week4.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">week2</span></a>
+  <a href="./week4.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Policy</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week5.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">week2</span></a>
+  <a href="./week5.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google earth engine(GEE)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week6.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">week2</span></a>
+  <a href="./week6.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week7.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week2</span></a>
+  <a href="./week7.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -184,14 +203,31 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">7.1</span>  Summary</a>
+  <ul class="collapse">
+  <li><a href="#landcover-classification" id="toc-landcover-classification" class="nav-link" data-scroll-target="#landcover-classification"><span class="toc-section-number">7.1.1</span>  Landcover classification</a></li>
+  <li><a href="#accuracy" id="toc-accuracy" class="nav-link" data-scroll-target="#accuracy"><span class="toc-section-number">7.1.2</span>  Accuracy</a></li>
+  <li><a href="#verification-method" id="toc-verification-method" class="nav-link" data-scroll-target="#verification-method"><span class="toc-section-number">7.1.3</span>  Verification method</a></li>
+  </ul></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="toc-section-number">7.2</span>  Application</a>
+  <ul class="collapse">
+  <li><a href="#map-land-cover-and-land-use-from-object-based-classification" id="toc-map-land-cover-and-land-use-from-object-based-classification" class="nav-link" data-scroll-target="#map-land-cover-and-land-use-from-object-based-classification"><span class="toc-section-number">7.2.1</span>  Map land cover and land use from object-based classification</a></li>
+  <li><a href="#fine-grained-zoning-mapping-of-land-cover-within-river" id="toc-fine-grained-zoning-mapping-of-land-cover-within-river" class="nav-link" data-scroll-target="#fine-grained-zoning-mapping-of-land-cover-within-river"><span class="toc-section-number">7.2.2</span>  Fine-grained zoning mapping of land cover within river</a></li>
+  </ul></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">7.3</span>  Reflection</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week2</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II</span></h1>
 </div>
 
 
@@ -206,8 +242,182 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="summary" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">7.1</span> Summary</h2>
+<section id="landcover-classification" class="level3" data-number="7.1.1">
+<h3 data-number="7.1.1" class="anchored" data-anchor-id="landcover-classification"><span class="header-section-number">7.1.1</span> Landcover classification</h3>
+<section id="object-based-image-analysis-obia" class="level4" data-number="7.1.1.1">
+<h4 data-number="7.1.1.1" class="anchored" data-anchor-id="object-based-image-analysis-obia"><span class="header-section-number">7.1.1.1</span> Object based image analysis (OBIA)</h4>
+<p>Object-based image analysis (OBIA) involves first grouping pixels into objects based on spectral similarity or external variables such as ownership, soil, or geological units. Many variables can be identified and categorised into spectra, shapes, and neighbourhoods. Examples of spectral variables include mean and standard deviation for specific spectral bands; Shape variables include size, perimeter, and compactness; For example, a neighbourhood variable represents the mean difference between an object and a dark-coloured object. Each object is also part of a “super object”, obtained by combining several adjacent objects into a larger one, each of which can be subdivided into smaller objects: “sub-objects”.</p>
+<div class="cell" data-layout-align="center" data-hash="week7_cache/html/unnamed-chunk-1_dc42af2961aff374360d921086f6ec29">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week7/Supercells.gif" class="img-fluid figure-img" style="width:70.0%"></p>
+<p></p><figcaption class="figure-caption">Use Euclidean distance in SLIC. Source: <a href="https://jakubnowosad.com/ogh2021/#10">Nowosad 2021</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center" data-hash="week7_cache/html/unnamed-chunk-2_7e105a2d46eb729dcaee36263cf72074">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week7/bear.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Supercells. Source: <a href="https://darshita1405.medium.com/superpixels-and-slic-6b2d8a6e4f08">Darshite Jain</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="sub-pixel-analysis" class="level4" data-number="7.1.1.2">
+<h4 data-number="7.1.1.2" class="anchored" data-anchor-id="sub-pixel-analysis"><span class="header-section-number">7.1.1.2</span> Sub-pixel analysis</h4>
+<p>The sub-pixel analysis is a digital image processing technique that achieves subpixel resolution in images. This means that subpixel resolution can be obtained when the information of a picture exceeds its nominal pixel resolution. For example, in an idea, a position is represented as an integer value (x,y) coordinates and a place where a fractional pixel location might be given.</p>
+<div class="cell" data-layout-align="center" data-hash="week7_cache/html/unnamed-chunk-3_196d4fd4fdcce54d21c8fa2352905a87">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week7/Comparison.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Comparison of true colour high spatial resolution data (a) and Landsat surface reflectance (b) highlighting the spatial detail captured by high-resolution imagery (c) and the same areas as observed by Landsat (d) for the subset East Beechboro used within this study. Source: <a href="https://www.tandfonline.com/doi/pdf/10.1080/01431161.2017.1346403?needAccess=true&amp;">Tandfonline</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="accuracy" class="level3" data-number="7.1.2">
+<h3 data-number="7.1.2" class="anchored" data-anchor-id="accuracy"><span class="header-section-number">7.1.2</span> Accuracy</h3>
+<section id="accuracy-in-remote-sensing-data" class="level4" data-number="7.1.2.1">
+<h4 data-number="7.1.2.1" class="anchored" data-anchor-id="accuracy-in-remote-sensing-data"><span class="header-section-number">7.1.2.1</span> Accuracy in remote sensing data</h4>
+<p>The accuracy assessment or verification of remote sensing data is an essential step in the remote sensing data processing. It determines the informational value of the resulting data to the user. Geographic data can only be effectively utilised when the data quality is known12. Accuracy assessment and validation are critical for remote sensing-based projects. Using unknown or less accurate data for decision-making or scientific analysis will result in low information reliability, error propagation effects, and limited value.</p>
+<div class="cell" data-layout-align="center" data-hash="week7_cache/html/unnamed-chunk-4_3716efde6e08003c47cb582f2b67cd21">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week7/Table.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Accuracy Dimensions in Remote Sensing. Source: <a href="https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/XLII-3/61/2018/isprs-archives-XLII-3-61-2018.pdf">Barsi et al.&nbsp;2018</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="balance-the-accuracy-of-the-data" class="level4" data-number="7.1.2.2">
+<h4 data-number="7.1.2.2" class="anchored" data-anchor-id="balance-the-accuracy-of-the-data"><span class="header-section-number">7.1.2.2</span> Balance the accuracy of the data</h4>
+<p>It cannot be achieved a high producer accuracy (recall) and a high user’s accuracy (precision) simultaneously.</p>
+<div class="cell" data-layout-align="center" data-hash="week7_cache/html/unnamed-chunk-5_0d43ab1d543e2cebb6cea20f2ce740fa">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week7/table1.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">. Source: <a href="https://mlu-explain.github.io/precision-recall/">MLU</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="verification-method" class="level3" data-number="7.1.3">
+<h3 data-number="7.1.3" class="anchored" data-anchor-id="verification-method"><span class="header-section-number">7.1.3</span> Verification method</h3>
+<section id="divide-the-dataset" class="level4" data-number="7.1.3.1">
+<h4 data-number="7.1.3.1" class="anchored" data-anchor-id="divide-the-dataset"><span class="header-section-number">7.1.3.1</span> Divide the dataset</h4>
+<p>Typically, the dataset is divided into training and testing sets. The training set is used to train the model, while the test set is used to evaluate the model’s performance. This aims to prevent overfitting, where the model performs well on the training data but not on the new data. By considering the model on an independent test set, we can better understand the model’s ability to generalise to unknown data.</p>
+<div class="cell" data-layout-align="center" data-hash="week7_cache/html/unnamed-chunk-6_08cf25aedeadbda355bb341b21805e02">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week7/Dividing the data set.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Dividing the data set. Source: <a href="https://towardsdatascience.com/understanding-train-test-split-scikit-learn-python-ea676d5e3d1">Towards Data</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="cross-validation" class="level4" data-number="7.1.3.2">
+<h4 data-number="7.1.3.2" class="anchored" data-anchor-id="cross-validation"><span class="header-section-number">7.1.3.2</span> Cross validation</h4>
+<p>Cross Validation is a statistical method used to assess the generalisation ability of a model. It tests the model’s performance on the other subsets by dividing the dataset into subsets and then training the model on one of the subsets. This process is repeated multiple times, training and testing with a different subgroup each time. Finally, the average of all test results is used to evaluate the model’s performance. Cross-validation can help us better understand the model’s generalisation ability for anonymous data and help select appropriate model parameters.</p>
+<div class="cell" data-layout-align="center" data-hash="week7_cache/html/unnamed-chunk-7_da7c846351c0e9ab35415f0bd74251f3">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week7/cross validation.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">cross validation. Source: <a href="https://en.wikipedia.org/wiki/Cross-validation_%28statistics%29">Towards Data</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="spatial-cross-validation" class="level4" data-number="7.1.3.3">
+<h4 data-number="7.1.3.3" class="anchored" data-anchor-id="spatial-cross-validation"><span class="header-section-number">7.1.3.3</span> Spatial Cross Validation</h4>
+<p>Spatial Cross Validation is a method for evaluating the performance of spatial prediction models. It is similar to normal cross-validation but considers spatial relationships when dividing the dataset. The dataset is divided into subsets in spatial cross-validation, each containing adjacent observations. Then, train the model on one subset and test the model’s performance on the other subsets. This process is repeated multiple times, training and testing with a different subgroup each time. Spatial cross-validation can help us better understand the model’s generalisation ability to unknown data and help select appropriate model parameters.</p>
+<div class="cell" data-layout-align="center" data-hash="week7_cache/html/unnamed-chunk-8_431f1db7b94d8c4b579b269a7e168e64">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week7/Spatial visualization of selected test and training observations for cross-validation of one repetition. Random (upper row) and spatial partitioning (lower row).jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Spatial visualization of selected test and training observations for cross-validation of one repetition. Random (upper row) and spatial partitioning (lower row). Source: <a href="https://geocompr.robinlovelace.net/spatial-cv.html">Geocompr</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="application" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="application"><span class="header-section-number">7.2</span> Application</h2>
+<section id="map-land-cover-and-land-use-from-object-based-classification" class="level3" data-number="7.2.1">
+<h3 data-number="7.2.1" class="anchored" data-anchor-id="map-land-cover-and-land-use-from-object-based-classification"><span class="header-section-number">7.2.1</span> Map land cover and land use from object-based classification</h3>
+<p>Whether object-based image analysis (OBIA) can improve land cover and land-use classification in complex agricultural landscapes located on the borders of Poland and Ukraine were tested. The results of OBIA-based land cover and land use classification based on OBIA and per pixel were quantitatively compared. The results show that when using the OBIA-based method, the OBIA-based process is significantly improved when the OBIA-based method is applied using both the spectra and spatial/geometric features of the image object, but not when the spectral or spatial/geometric features alone are used<span class="citation" data-cites="goodin2015">(<a href="references.html#ref-goodin2015" role="doc-biblioref">Goodin, Anibas, and Bezymennyi 2015</a>)</span>. In human-altered landscapes, the geometry and arrangement of surface spatial structures can convey land use information, and OBIA-based techniques can provide a powerful tool for improving classification.</p>
+<div class="cell" data-layout-align="center" data-hash="week7_cache/html/unnamed-chunk-9_9982d1ea8d1b0323d5035b29a8d48a42">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week7/Results from the per-pixel (a) and OBIA-combined (b) classifications.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Results from the per-pixel (a) and OBIA-combined (b) classifications. Source: <a href="https://www.tandfonline.com/doi/full/10.1080/01431161.2015.1088674?needAccess=true">Tandfonline</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The object-based approach involves two distinct steps: (1) segmentation (including object parameter calculation); (2) Classification. In object-based analysis, segmentation is a critical step.</p>
+</section>
+<section id="fine-grained-zoning-mapping-of-land-cover-within-river" class="level3" data-number="7.2.2">
+<h3 data-number="7.2.2" class="anchored" data-anchor-id="fine-grained-zoning-mapping-of-land-cover-within-river"><span class="header-section-number">7.2.2</span> Fine-grained zoning mapping of land cover within river</h3>
+<p>Accurate mapping of land cover diversity in riparian areas at the regional scale is a significant challenge to better understanding the impact of riparian landscapes and associated natural and anthropogenic pressures on river ecological conditions. Since land cover (RALC) structures in riparian areas are often unavailable using medium-scale satellite imagery, finer spatial resolution imagery and specific mapping techniques are required<span class="citation" data-cites="tormos2012">(<a href="references.html#ref-tormos2012" role="doc-biblioref">Tormos et al. 2012</a>)</span>. Develop a classification program based on a thorough multi-scale object-based image analysis (OBIA) scheme to generate detailed and reliable RARC maps in different geographical environments (geomorphology, climate and geology).</p>
+<div class="cell" data-layout-align="center" data-hash="week7_cache/html/unnamed-chunk-10_ce4abc36c676cbf3ce2d77cc85715dc9">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week7/Flowchart of the riparian area land-cover classification procedure.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Flowchart of the riparian area land-cover classification procedure. Source: <a href="https://www.tandfonline.com/doi/full/10.1080/01431161.2011.637093">Tandfonline</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The OBIA scheme uses fuzzy expert knowledge classification rules to combine information from high spatial resolution multispectral images (satellite or airborne) with available space-thematic data. It was tested on the Hérault basin (southern France), which presents a contrasting landscape with a total length of 1,150 km of streams, using SPOT (Earth Observation System) 5 XS imagery (10 m pixels), aerial photography (0.5 m pixels) and several national space thematic data<span class="citation" data-cites="tormos2012">(<a href="references.html#ref-tormos2012" role="doc-biblioref">Tormos et al. 2012</a>)</span>.</p>
+<div class="cell" data-layout-align="center" data-hash="week7_cache/html/unnamed-chunk-11_fc425ae29afdd5c8102a332f47a942c1">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week7/river.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">(a) River corridor land cover (RALC) map of the Hérault River basin according to the level 3 hierarchical classification nomenclature. (b) RALC map of 80 km of the Hérault River mainstream according to the pressure typology derived from high spatial resolution images (HSRIs) (left) and CORINE Land Cover (CLC) (right). Source: <a href="https://www.tandfonline.com/doi/full/10.1080/01431161.2011.637093">Tandfonline</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="reflection" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">7.3</span> Reflection</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-goodin2015" class="csl-entry" role="doc-biblioentry">
+Goodin, Douglas G., Kyle L. Anibas, and Maksym Bezymennyi. 2015. <span>“Mapping Land Cover and Land Use from Object-Based Classification: An Example from a Complex Agricultural Landscape.”</span> <em>International Journal of Remote Sensing</em> 36 (18): 4702–23. <a href="https://doi.org/10.1080/01431161.2015.1088674">https://doi.org/10.1080/01431161.2015.1088674</a>.
+</div>
+<div id="ref-tormos2012" class="csl-entry" role="doc-biblioentry">
+Tormos, T., P. Kosuth, S. Durrieu, S. Dupuy, B. Villeneuve, and J. G. Wasson. 2012. <span>“Object-Based Image Analysis for Operational Fine-Scale Regional Mapping of Land Cover Within River Corridors from Multispectral Imagery and Thematic Data.”</span> <em>International Journal of Remote Sensing</em> 33 (14): 4603–33. <a href="https://doi.org/10.1080/01431161.2011.637093">https://doi.org/10.1080/01431161.2011.637093</a>.
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -461,7 +671,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./week6.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">week2</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
