@@ -95,3 +95,8 @@ knitr::include_graphics('week7/river.jpg')
 ```
 
 ## Reflection
+
+In this week's course, I learnt about object-based graphical processing of remotely sensed data, assessing the accuracy of remotely sensed data and data validation methods. I also learnt how to determine the accuracy of remote sensing data and mastered data validation techniques. This knowledge will greatly help me in my future research and practical work.
+
+Remote sensing data has many applications in urban planning, environmental protection and natural resource management. By studying this week's course, I can better apply remote sensing data to analyse and control cities. For example, remote sensing data can be used to conduct land use analysis and improve the efficiency of urban land use. Also, remote sensing data can be used for urban environmental protection and pollution monitoring.
+

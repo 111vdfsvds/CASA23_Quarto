@@ -1,4 +1,4 @@
-# Classification I
+# Urban Heat Island
 
 ## Summary
 
@@ -83,3 +83,8 @@ The urban climate has undergone significant changes from its natural state due t
 -   *Cool pavement* - Use more astounding paving materials than traditional pavement on sidewalks, parking lots, and streets.
 
 ## Reflection
+
+Remote sensing technology has essential applications in urban heat island detection, and combined with the development of urban policies, it can effectively respond to urban heat waves. Remote sensing data can help governments monitor urban heat island phenomena more accurately and can be used to build resident software such as APPs to deliver real-time urban heat wave warning information and help residents take appropriate measures. In the future, as remote sensing technology develops, its potential for application in urban management will grow.
+
+Although remote sensing technology has essential applications in urban heat island detection and urban policy-making, there are some technical limitations. Firstly, the resolution of remote sensing technology could be improved, making it impossible to monitor small urban heat island phenomena accurately. Secondly, the complexity of acquiring and processing remote sensing data makes it costly to use remote sensing technology in practice, requiring specialist personnel to operate. In addition, some things could be improved in the acquisition and processing of remote sensing data, which may affect the accuracy of the data. Therefore, in applying remote sensing technology to solve the urban heat wave problem, these technical limitations must be fully considered, and effective measures must be adopted to solve the problem.
+

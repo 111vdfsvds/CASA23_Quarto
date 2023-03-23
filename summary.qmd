@@ -1,7 +1,3 @@
 # Summary
 
-In summary, this book has no content whatsoever.
-
-```{r}
-1 + 1
-```
+I had the pleasure of taking the Remote Sensing course with you this past semester. This course taught me much about processing remote sensing data and applying machine learning algorithms. In addition, I also gained insight into the application of remote sensing data in urban policy. I gained much knowledge in the process. Finally, thanks to teachers and fellow students for their help and support.
