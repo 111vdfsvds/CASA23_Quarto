@@ -19,6 +19,5 @@ Mail: zhiwei.huang.22@ucl.ac.uk / huangzhiwei_hz@163.com
 
 Phone numbers: +86 15004921091
 
-## Instruction
 
-Special thanks to Dr Andy MacLachlan for his help in the preparation of this book.
+**Special thanks to Dr Andy MacLachlan for his help in the preparation of this book.**
